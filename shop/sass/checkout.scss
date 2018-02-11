@@ -1,0 +1,229 @@
+/*------- 20. One Page checkout -------- */
+
+.block-progress {
+  background-color: #f8f8f8;
+}
+.block-progress .block-title {
+  padding-left: 10px;
+  background-color: #37a4d9;
+  color: #fff;
+  border: none;
+}
+.block-progress .block-content {
+  padding: 12px 15px 15px;
+  text-align: left;
+}
+.block-progress dl {
+  border-top: none !important
+}
+.block-progress dt {
+  font-weight: normal;
+  text-transform: none;
+  padding: 10px 0;
+  font-size: 12px;
+}
+.block-progress dt.complete, .block-progress dd.complete {
+  font-size: 12px;
+  padding: 0;
+  margin: 0;
+}
+.block-progress dt.complete a, .block-progress dd.complete a {
+  font-size: 12px;
+  font-weight: normal;
+  text-decoration: underline;
+  text-transform: none;
+  color: #666666;
+}
+.block-progress dt.complete a:hover, .block-progress dd.complete a:hover {
+  font-size: 12px;
+  font-weight: normal;
+  text-decoration: underline;
+  text-transform: none;
+  color: #333;
+}
+.block-progress dt.complete {
+  margin: 0 0 5px 0;
+}
+.block-progress dd {
+  border: 0px solid #ddd;
+  margin: 0 0 6px;
+  padding: 0px 0px 8px !important;
+}
+.one-page-checkout .active .step-title h3 {
+  color: #37a4d9;
+  font-size: 13px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: bold;
+}
+.one-page-checkout .step-title h3 {
+  border-bottom: 0px solid #E4E4E4;
+  margin: 0 0 0 55px;
+  text-align: left;
+  line-height: 35px;
+  font-size: 13px;
+  font-family: 'Open Sans', sans-serif;
+  color: #333;
+  font-weight: bold;
+}
+.one-page-checkout .active .step-title {
+  cursor: default;
+  font-size: 14px;
+  padding-top: 0px;
+  text-align: left;
+  line-height: 32px;
+  font-family: 'Open Sans', sans-serif;
+  border-top: none;
+}
+.one-page-checkout .step {
+  padding: 10px 10px 10px 55px;
+  background-color: #FFFFFF;
+}
+select#billing-address-select {
+  width: 70%;
+  padding: 10px;
+  margin-top: 5px;
+  background: #f0f0f0;
+  border: 1px solid #f0f0f0;
+  outline: none;
+  color: #aaa;
+}
+select#billing-address-select:focus {
+  background: none repeat scroll 0 0 #FFFFFF;
+  border: 1px solid #DDDDDD;
+  color: #333333;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  outline: medium none;
+  padding: 9px 7px 10px;
+  vertical-align: middle;
+}
+select#shipping-address-select {
+  width: 60%;
+  padding: 10px;
+  margin-top: 5px;
+  background: #f0f0f0;
+  border: 1px solid #f0f0f0;
+  outline: none;
+  color: #aaa;
+}
+select#shipping-address-select:focus {
+  background: none repeat scroll 0 0 #FFFFFF;
+  border: 1px solid #DDDDDD;
+  color: #333333;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  outline: medium none;
+  padding: 9px 7px 10px;
+  vertical-align: middle;
+}
+.one-page-checkout {
+  position: relative;
+  margin-bottom: 12px;
+  list-style: none;
+  padding: inherit;
+  padding: 0;
+  margin-top: 18px;
+}
+.one-page-checkout li.section {
+  border-bottom: 0;
+  margin-bottom: 8px;
+  overflow: hidden;
+}
+.one-page-checkout .step-title {
+  text-align: right;
+  padding: 7px 0;
+}
+.one-page-checkout .step-title .number {
+  float: left;
+  line-height: 15px;
+  font-size: 15px;
+  color: #333;
+  padding: 10px 13px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: bold;
+}
+.one-page-checkout .active .step-title .number {
+  background: none repeat scroll 0 0 #37a4d9;
+  border: 1px solid #37a4d9;
+  color: #fff;
+  padding: 10px 12px;
+  font-weight: bold;
+}
+.one-page-checkout .step .col2-set {
+  padding: 0;
+}
+.one-page-checkout .order-review {
+  overflow: hidden;
+}
+#checkout-review-table .data-table {
+  border-bottom: none;
+}
+#checkout-step-login .col2-set .col-2 {
+  background-color: #fff;
+  float: left;
+  padding: 0px;
+  width: 45%;
+  min-height: 270px;
+}
+#checkout-step-login .col2-set .col-1 {
+  float: right;
+  padding: 0 0 0 40px;
+  width: 45%;
+  min-height: 270px;
+  border-left: 1px #e4e4e4 solid;
+}
+#opc-login h2 {
+  border-bottom: 0px solid #E4E4E4;
+  padding-bottom: 8px;
+  font-weight: bold;
+  margin-bottom: auto;
+  margin-top: auto;
+  font-size: 12px;
+}
+.one-page-checkout .buttons-set .f-right {
+  margin-top: 13px;
+  color: #626262;
+  font-size: 12px;
+}
+#opc-login input {
+  color: #626262;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 13px;
+  vertical-align: middle;
+}
+#opc-login .col2-set .col-2 p {
+  text-align: left;
+}
+#opc-login h4 {
+  clear: left;
+  float: none;
+  font-size: 13px;
+  margin-right: 5px;
+}
+#opc-login li.control label {
+}
+.form-list li.control input.radio, .form-list li.control input.checkbox {
+  margin: 0 8px 0 0;
+}
+input.radio {
+  display: inline-block;
+  margin: 0 5px 0 0;
+  vertical-align: middle;
+}
+.form-list {
+  list-style: none outside none;
+  margin: 0;
+  padding: 0;
+}
+form-list label.required em {
+  font-style: normal;
+}
+.required em {
+  color: #ff0000;
+}
+.form-list label {
+  color: #333;
+  font-weight: normal;
+}

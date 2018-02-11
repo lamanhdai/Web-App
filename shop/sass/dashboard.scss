@@ -1,0 +1,39 @@
+/*----- 21. Dashboard -----*/
+.dashboard {
+}
+.dashboard .welcome-msg {
+  text-align: left;
+  padding: 0px 0 5px;
+  color: #333;
+  font-size: 12px
+}
+.dashboard .welcome-msg strong {
+  font-weight: 900;
+  font-size: 13px;
+}
+#my-orders-table {
+  border: none;
+}
+.box-account {
+  margin-top: 15px;
+}
+.box-account h5 {
+  font-weight: bold;
+}
+.box-account .page-title {
+  margin: 0 !important;
+  padding: 0;
+  background: none;
+  border-bottom: none !important;
+}
+.box-account .page-title h2 {
+  font-size: 16px;
+}
+.box-account address {
+  color: #333;
+  text-align: left;
+  border-bottom: none;
+}
+.box-account .col2-set a {
+  text-decoration: underline
+}

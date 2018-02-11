@@ -1,0 +1,256 @@
+/*--------- 10. Price --------- */
+.price {
+  font-size: 12px;
+  color: #333;
+  white-space: nowrap;
+}
+.price-box {
+  margin: 3px 0;
+  min-height: 20px;
+}
+  /* Regular price */
+.regular-price {
+  display: inline
+}
+.regular-price .price {
+  font-weight: 900;
+  font-size: 12px;
+  color: #ff0000;
+}
+.block .regular-price, .block .regular-price .price {
+  color: #000;
+}
+.price-box .price-from .price {
+  font-weight: 900;
+  font-size: 12px;
+  color: #333;
+  line-height: normal;
+}
+.price-box .price-to .price {
+  font-weight: 900;
+  font-size: 12px;
+  color: #333;
+}
+.price-box .minimal-price .price {
+  font-weight: 900;
+  font-size: 12px;
+  color: #333;
+}
+  /* Old price */
+.old-price .price-label {
+  white-space: nowrap;
+  color: #999;
+  display: none;
+}
+.old-price {
+  display: inline;
+  margin: auto;
+}
+.price-box span.price-sep {
+  color: #202020;
+  display: none;
+  padding: 0 5px;
+}
+  /* Old price */
+.old-price .price-label {
+  color: #777777;
+  display: none;
+  white-space: nowrap;
+}
+.old-price .price {
+  color: #777777;
+  font-size: 13px;
+  font-weight: normal;
+  text-decoration: line-through;
+  margin-right: 6px;
+}
+.latest-product .old-price .price-label {
+  display: none;
+}
+  /* Special price */
+.special-price {
+  margin: 0;
+  display: inline-block;
+}
+.special-price .price-label {
+  color: #666;
+  display: none;
+  font-size: 13px;
+  font-weight: 400;
+  white-space: nowrap;
+}
+.special-price .price {
+  font-size: 12px;
+  color: #ff0000;
+  font-weight: 900;
+}
+.special-price .price-label {
+  font-size: 13px;
+  font-weight: 900;
+  white-space: nowrap;
+  color: #666;
+  display: none;
+}
+.latest-product .special-price .price-label {
+  display: none;
+}
+  /* Minimal price (as low as) */
+.minimal-price {
+  margin: 0;
+}
+.minimal-price .price-label {
+  white-space: nowrap;
+}
+.minimal-price-link {
+  display: inline;
+}
+.minimal-price-link .label {
+}
+  /* Special price */
+
+  /* Price range */
+.price-from {
+  margin: 0;
+  font-size: 12px;
+  margin-right: 10px;
+  display: inline-block;
+}
+.price-from .price-label {
+  font-weight: normal;
+  white-space: nowrap;
+  color: #909090;
+  font-size: 12px;
+}
+.price-to {
+  margin: 0;
+  font-size: 12px;
+  margin-left: 4px;
+  display: inline-block
+}
+.price-to .price-label {
+  font-weight: normal;
+  white-space: nowrap;
+  color: #909090;
+}
+  /* Minimal price (as low as) */
+.minimal-price {
+  margin: 0;
+}
+.minimal-price .price-label {
+  font-weight: normal;
+  white-space: nowrap;
+  color: #909090;
+  font-size: 12px;
+}
+.minimal-price-link {
+}
+.minimal-price-link .label {
+  color: #909090;
+  margin-left: 4px;
+}
+.minimal-price-link .price {
+  font-weight: 900;
+  color: #333;
+  font-size: 12px;
+}
+small {
+  font-size: 85%;
+  font-weight: normal;
+  text-transform: lowercase;
+  color: #999999;
+}
+.actions button.button.btn-cart {
+  background: #fff;
+  border: 1px solid #ddd;
+  margin: 10px 8px 0 8px;
+  padding: 7px 11px 7px 11px;
+  color: #333;
+  line-height: 14px;
+  transition: color 300ms ease-in-out 0s, background-color 300ms ease-in-out 0s, background-position 300ms ease-in-out 0s;
+}
+.col-item:hover .actions button.button.btn-cart {
+  background: #37a4d9;
+  border: 1px solid #37a4d9;
+  margin: 10px 8px 0 8px;
+  padding: 7px 11px 7px 11px;
+  color: #FFFFFF;
+}
+.actions button.button.btn-cart span {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 11px;
+  padding: 0px;
+  font-weight: bold;
+  margin-left: 0;
+  text-transform: uppercase
+}
+.promo-banner-section {
+  margin: 45px auto;
+  overflow: hidden;
+}
+.promo-banner-section img {
+  -webkit-transition-duration: 500ms;
+  transition-duration: 500ms;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transform: translateZ(0);
+  -moz-transform: translateZ(0);
+  transform: translateZ(0);
+}
+.promo-banner-section img:hover {
+  -webkit-transform: scale(1.11);
+  transform: scale(1.11);
+  -moz-transform: scale(1.11);
+}
+.small-pr-slider .controls .prev {
+  top: 2px;
+  right: 50px;
+}
+.small-pr-slider .controls .next {
+  top: 2px;
+  right: 15px;
+}
+.small-pr-slider .col-item .actions-links {
+  bottom: 0px;
+}
+.small-pr-slider .col-item:hover .actions-links {
+  bottom: 0px;
+}
+.small-pr-slider .col-item:hover .actions-links .add-to-links a.magik-btn-quickview {
+  right: 0%;
+}
+.small-pr-slider .col-item .actions-links .add-to-links a.magik-btn-quickview {
+  font-size: 12px;
+  line-height: 20px;
+}
+.small-pr-slider .col-item .actions-links .add-to-links a.link-wishlist {
+  font-size: 12px;
+  line-height: 20px;
+}
+.small-pr-slider .col-item .actions-links .add-to-links a.link-wishlist:hover {
+  font-size: 12px;
+  line-height: 20px;
+}
+.small-pr-slider .col-item .actions-links .add-to-links a.link-compare {
+  font-size: 12px;
+  line-height: 20px;
+}
+.small-pr-slider .col-item .actions-links .add-to-links a.link-compare:hover {
+  font-size: 12px;
+  line-height: 20px;
+}
+.small-pr-slider .col-item:hover .actions-links .add-to-links a.link-wishlist {
+  right: 0%;
+}
+.small-pr-slider .col-item:hover .actions-links .add-to-links a.link-compare {
+  right: 15%;
+}
+.recommend {
+  margin: 20px auto;
+  position: relative;
+}
+.recommend .controls .next {
+  right: 0;
+}
+.recommend .controls .prev {
+  right: 36px;
+}

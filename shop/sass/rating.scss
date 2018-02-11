@@ -1,0 +1,65 @@
+.no-rating {
+  margin: 0;
+}
+.no-rating a {
+  color: #000;
+}
+.ratings {
+  font-size: 11px;
+  line-height: normal;
+  margin: 2px 0;
+}
+.ratings strong {
+  float: left;
+  margin: 1px 3px 0 0;
+}
+.category-products ul.products-grid li.item .ratings .rating-links {
+  display: none
+}
+.ratings .rating-links {
+  margin: 0;
+  display: none;
+}
+.ratings .rating-links a {
+  margin: 0;
+  text-decoration: none;
+  color: #666;
+  font-size: 12px
+}
+.ratings .rating-links .separator {
+  margin: 0 2px;
+}
+.ratings dt {
+}
+.ratings dd {
+}
+.rating-box {
+  width: 76px;
+  height: 15px;
+  font-size: 0;
+  line-height: 0;
+  background: url(../images/bkg_rating.png) 0 0 repeat-x;
+  text-indent: -999em;
+  overflow: hidden;
+}
+.rating-box .rating {
+  width:60%;
+  float: left;
+  height: 15px;
+  background: url(../images/bkg_rating.png) 0 100% repeat-x;
+}
+.ratings .rating-box {
+  margin-right: 8px;
+  display: inline-block;
+}
+.ratings .amount {
+}
+.ratings-table th, .ratings-table td {
+  font-size: 11px;
+  line-height: 1.15;
+  padding: 3px 0;
+}
+.ratings-table th {
+  font-weight: 900;
+  padding-right: 8px;
+}

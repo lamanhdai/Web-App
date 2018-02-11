@@ -1,0 +1,47 @@
+.page {
+  position: relative;
+  margin: auto;
+  background: #fff;
+  width: 100%;
+}
+  /* Base Columns */
+.col-left {
+  margin-bottom: 0px;
+}
+.col-main {
+}
+.col-right {
+  margin-bottom: 0px;
+}
+  /* 1 Column Layout */
+.col1-layout .header-background-default {
+  margin: 20px;
+  padding: 0;
+}
+.col1-layout .col-main {
+  float: none;
+  width: auto;
+}
+  /* 2 Columns Layout */
+.col2-left-layout .col-main {
+}
+.col2-right-layout .col-main {
+}
+.col2-right-layout ol.opc .col-md-4 {
+  margin-right: 15px;
+}
+  /* 3 Columns Layout */
+.col3-layout .col-main {
+}
+.col3-layout .col-wrapper {
+  float: left;
+  width: 780px;
+}
+.col3-layout .col-wrapper .col-main {
+  float: right;
+}
+.main-container {
+  background-color: #fff;
+  min-height: 400px;
+  padding: 20px 0 0px;
+}

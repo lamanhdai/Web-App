@@ -1,0 +1,24 @@
+/*--------- 18. View Type: Grid -------- */
+
+.products-grid, .products-list, ul.products-grid, ul.products-list, ol.products-grid, ol.products-list {
+  list-style: none outside none;
+  margin: 0;
+  padding: 0;
+}
+.products-grid li.item {
+  margin-bottom: 15px;
+  margin-top: 10px;
+}
+.col-main .category-products .products-grid {
+  margin-left: -15px;
+  margin-right: -15px;
+}
+.category-products .products-grid .col-item:hover .actions-links {
+  height: 35px;
+  background: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 58%;
+  width: 100%;
+  opacity: 0.9;
+  z-index: 10000;
+}

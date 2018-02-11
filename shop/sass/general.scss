@@ -1,0 +1,19 @@
+body {
+  font-size: 12px;
+}
+a {
+  color: #333;
+  text-decoration: none;
+}
+a:hover, a:focus {
+  color: #23527c;
+  text-decoration: none;
+}
+ul, ol {
+  padding: 0px;
+  margin: auto;
+  list-style: none;
+}
+legend {
+  display: none;
+}

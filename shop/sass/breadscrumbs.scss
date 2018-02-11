@@ -1,0 +1,27 @@
+/*---------  15. Breadcrumbs --------- */
+
+.breadcrumbs {
+  background: none repeat scroll 0 0 #f5f5f5;
+  font-size: 11px;
+  padding: 10px 0px;
+}
+.breadcrumbs ul {
+  margin: 0px 0px 0px 15px;
+  padding: 0px;
+}
+.breadcrumbs li {
+  display: inline;
+}
+.breadcrumbs a {
+  color: #666;
+}
+.breadcrumbs strong {
+  color: #333;
+  font-weight: 900;
+}
+.breadcrumbs span {
+  color: #ccc;
+  display: inline-block;
+  font-size: 13px;
+  margin: 0 5px;
+}

@@ -1,0 +1,373 @@
+/*------- 22. Global Styles -------*/
+  /* Form Elements */
+  p.control input.checkbox, p.control input.radio {
+    margin-right: 6px;
+  }
+    /* Grouped fields */
+  div#hideShow {
+      text-align: left;
+      display: none;
+  }
+  .form-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  .form-list li {
+    margin: 0 0 10px;
+    position: relative;
+  }
+  .form-list li.comment {
+    margin-bottom: 10px;
+  }
+  .form-list li.comment p {
+    margin-bottom: 0;
+  }
+  .form-list li.fields {
+    margin-bottom: 0;
+  }
+  .form-list li.control, .form-list li.has-pretty-child {
+    margin-bottom: 10px;
+  }
+  .form-list label {
+    position: relative;
+    z-index: 0;
+    font-weight: normal;
+    color: #333;
+    display: inline;
+  }
+  .form-list label.required {
+    color: #333;
+  }
+  .form-list label.required em {
+    font-style: normal;
+  }
+  .review2 label {
+    font-weight: normal;
+  }
+  .review2 label em {
+    color: #ff0000;
+  }
+  .form-list li.control label, .form-list li.has-pretty-child label {
+    float: none;
+    vertical-align: top;
+    line-height: 1;
+  }
+  .form-list li.control input.radio, .form-list li.control input.checkbox, .form-list li.has-pretty-child input.radio, .form-list li.has-pretty-child input.checkbox {
+    margin-right: 6px;
+    margin-top: -2px;
+  }
+  .form-list li.control .input-box {
+    clear: none;
+    display: inline;
+    width: auto;
+  }
+  .form-list .input-box {
+    display: block;
+    clear: both;
+    margin-bottom: 0;
+  }
+  .form-list .field {
+    position: relative;
+    margin-bottom: 25px;
+  }
+  .form-list input.input-text {
+    background: #f0f0f0;
+    border: 1px solid #f0f0f0;
+    padding: 10px;
+    width: 100%;
+    margin-top: 5px;
+    outline: none;
+  }
+  .form-list input.input-text:focus {
+    background: #fff;
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-top: 5px;
+    outline: none;
+  }
+  .form-list select {
+    margin: 5px 0 2px;
+    width: 360px;
+    outline: none;
+  }
+  .form-list li.additional-row {
+    border-top: 1px solid #ccc;
+    margin-top: 10px;
+    padding-top: 7px;
+  }
+  .form-list li.additional-row .btn-remove {
+    float: right;
+    margin: 5px 0 0;
+  }
+  .form-list .input-range input.input-text {
+    outline: none;
+  }
+  input.radio {
+    margin-right: 3px;
+  }
+  .col2-set .col-1 ul {
+    list-style: none outside none;
+    padding: 0;
+  }
+  .group-select .require {
+    color: #ff0000;
+    font-size: 12px;
+    margin-bottom: 3px;
+  }
+  .group-select li {
+    list-style: none outside none;
+    margin: 0 0 5px;
+    overflow: hidden;
+  }
+  .group-select {
+  
+  }
+  .group-select ul {
+    margin: 0;
+    padding: 0;
+  }
+  .group-select .required {
+    color: #FF0000;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+  }
+  .group-select .require {
+    color: #FF0000;
+    font-size: 12px;
+    margin-bottom: 3px;
+  }
+  .group-select label {
+    font-size: 12px;
+    font-weight: normal;
+    color: #333;
+  }
+  li#billing-new-address-form {
+      display: none;
+  }
+  div#checkout-step-shipping {
+    display:none;}
+  div#checkout-step-shipping_method {
+    display:none;}
+  div#checkout-step-payment {
+    display:none;}
+  div#checkout-step-review {
+    display:none;}
+  .group-select li {
+    margin: 0 0 5px;
+    overflow: hidden;
+    list-style: none
+  }
+  .contacts-index-index .group-select li {
+    display:block !important;
+  }
+  input#hideit {
+      display: none !important;
+  }
+  .product-essential .product-img-box .moreview_thumb .zoomImg{
+    position:absolute;}
+  .group-select li .input-box {
+    float: left;
+    width: 45%;
+  }
+  .group-select li input.input-text, .group-select li textarea {
+    width: 88%;
+    background: #f7f7f7;
+    border: 1px solid #f0f0f0;
+    padding: 10px;
+    outline: none;
+  }
+  .group-select li input.input-text:focus, .group-select li textarea:focus {
+    background: #fff;
+    border: 1px solid #ddd;
+    padding: 10px;
+    outline: none;
+  }
+  .group-select li select {
+    width: 80%;
+    padding: 3px;
+    background: #f7f7f7;
+    border: 1px solid #f0f0f0;
+    padding: 10px;
+  }
+  .group-select li select:focus {
+    padding: 3px;
+    background: #fff;
+    border: 1px solid #ddd;
+    padding: 10px;
+  }
+  .group-select li .input-box input.input-text, .group-select li .input-box textarea {
+    width: 95%;
+    margin-top: 5px;
+    background: #f7f7f7;
+    border: 1px solid #f7f7f7;
+    padding: 10px;
+  }
+  .group-select li .input-box input.input-text:focus, .group-select li .input-box textarea:focus {
+    margin-top: 5px;
+    background: #fff;
+    border: 1px solid #ddd;
+    padding: 10px;
+  }
+  .group-select li .input-box select {
+    width: 96%;
+    margin-top: 5px;
+    outline: none;
+  }
+  .group-select.wide input.input-text, .group-select.wide textarea {
+    width: 90%;
+  }
+  .product-image-area {
+    position: relative;
+    overflow: hidden;
+  }
+  .product-image-area a.product-image:hover {
+    opacity: 0.6;
+    -webkit-transform: scaleY(1);
+    transform: scaleY(1);
+  }
+  .product-image-area:hover .hover_fly {
+    bottom: 0;
+  }
+  .hover_fly {
+    transition: all 300ms ease-in-out;
+    -moz-transition: all 300ms ease-in-out;
+    -ms-transition: all 300ms ease-in-out;
+    -webkit-transition: all 300ms ease-in-out;
+    -o-transition: all 300ms ease-in-out;
+  }
+  .hover_fly a {
+    transition: all 300ms ease-in-out;
+    -moz-transition: all 300ms ease-in-out;
+    -ms-transition: all 300ms ease-in-out;
+    -webkit-transition: all 300ms ease-in-out;
+    -o-transition: all 300ms ease-in-out;
+  }
+  .hover_fly a:first-child {
+    transition: all 300ms ease-in-out;
+    -moz-transition: all 300ms ease-in-out;
+    -ms-transition: all 300ms ease-in-out;
+    -webkit-transition: all 300ms ease-in-out;
+    -o-transition: all 300ms ease-in-out;
+  }
+  .hover_fly {
+    position: absolute;
+    bottom: -35px;
+    width: 100%;
+    left: 0;
+    background: #41ade2;
+    z-index: 6;
+  }
+  .hover_fly a {
+    font-size: 1em;
+    color: #fff;
+    display: inline-block;
+    width: 15%;
+    height: 35px;
+    line-height: 34px;
+    position: relative;
+    background: #41ade2;
+    float: right;
+    text-align: center;
+    white-space: nowrap;
+    border-right: 1px #2f98cc solid;
+  }
+  .hover_fly a div {
+    overflow: hidden;
+  }
+  .hover_fly a:first-child {
+    background-image: none;
+    width: 55%;
+    text-align: center;
+    background-color: #1c95d1;
+    color: #FFF;
+    float: left;
+    left: 0;
+  }
+  .hover_fly a:first-child span {
+    display: inline-block;
+  }
+  .hover_fly a span {
+    display: none;
+    left: 2.2em;
+    white-space: nowrap;
+    font-size: 11px;
+    vertical-align: top;
+    text-transform: uppercase;
+    margin-left: 6px;
+    font-family: 'Open Sans', sans-serif;
+    letter-spacing: 0.5px;
+  }
+  .hover_fly a i {
+    height: 34px;
+    line-height: 32px;
+    font-size: 14px;
+  }
+  .hover_fly a:hover {
+    width: 55% !important;
+    background-color: #1c95d1 !important;
+    color: white !important;
+  }
+  .hover_fly a:hover span {
+    display: inline-block !important;
+  }
+  .hover_fly .icon-shopping-cart:before {
+    font-size: 16px;
+  }
+  .hover_fly .icon-eye-open:before {
+    font-size: 16px;
+  }
+  .hover_fly:hover a:first-child {
+    width: 15%;
+    background-color: #fdd922;
+    text-align: center;
+    color: #000;
+  }
+  .hover_fly:hover a:first-child span {
+    display: none;
+  }
+  .hover_fly.fly_3 a {
+    width: 20%;
+  }
+  .hover_fly.fly_3 a:first-child {
+    width: 60%;
+  }
+  .hover_fly.fly_3 a:hover {
+    width: 60% !important;
+  }
+  .hover_fly.fly_3:hover a:first-child {
+    width: 20%;
+  }
+  .hover_fly.fly_2 a {
+    width: 30%;
+  }
+  .hover_fly.fly_2 a:first-child {
+    width: 70%;
+  }
+  .hover_fly.fly_2 a:hover {
+    width: 70% !important;
+  }
+  .hover_fly.fly_2:hover a:first-child {
+    width: 30%;
+  }
+  .hover_fly.fly_1 a {
+    width: 100%;
+  }
+  .hover_fly.fly_1 a:first-child {
+    width: 100%;
+    position: relative !important;
+  }
+  .hover_fly.fly_1 a:hover {
+    width: 100% !important;
+  }
+  .hover_fly.fly_1:hover a:first-child {
+    width: 100%;
+  }
+  a#fancybox-close {
+    display:inline;}
+  div#fancybox-wrap {
+        height: auto;
+      top: 20%;
+      left: 27%;
+      display: block;}
+  

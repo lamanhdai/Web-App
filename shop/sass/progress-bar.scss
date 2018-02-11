@@ -1,0 +1,263 @@
+  /*--------- 25. Progress Bar --------------*/
+  .state_bar {
+    overflow: hidden;
+    background-color: #FFFFFF;
+    padding: 10px 0 25px;
+  }
+  .checkout-progress {
+    padding-top: 0px;
+    margin: 0px 0 0px;
+    overflow: hidden;
+    padding: 0;
+    list-style: none;
+  }
+  .checkout-progress li {
+    width: 19.8%;
+    text-align: center;
+    color: #666;
+    margin-right: 0px;
+    padding: 5px 7px;
+    text-transform: uppercase;
+    background-color: #fff;
+    border-bottom: 3px double #ddd;
+    font-family: 'Open Sans', sans-serif;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: normal;
+    letter-spacing: 1px;
+    display: inline-block;
+    margin-right: -3px;
+  }
+  .checkout-progress li.last {
+    margin-right: 0;
+  }
+  .checkout-progress li.active {
+    background-color: #fff;
+    border-bottom: 3px solid #37a4d9;
+    color: #37a4d9;
+    font-weight: bold;
+  }
+    /* Multiple Addresses Checkout */
+  #multiship-addresses-table input.input-text {
+    background-color: #FFF;
+    padding: 6px;
+    border: 1px solid #ddd;
+    text-align: center;
+  }
+  #multiship-addresses-table .btn-remove {
+    background-color: #fff;
+    background-image: none;
+    color: #333;
+    cursor: pointer;
+    padding: 12px 15px;
+    border-radius: 2px;
+    cursor: pointer;
+    text-decoration: none;
+    border: 1px solid #fff;
+    float: left;
+    transition: all 0.3s linear;
+    line-height: 12px;
+  }
+  #multiship-addresses-table .btn-remove:before {
+    content: "\f014";
+    font-family: FontAwesome;
+    font-size: 14px;
+  }
+  #multiship-addresses-table .btn-remove:hover {
+    background-image: none;
+    padding: 12px 15px;
+    color: #37a4d9;
+  }
+  .multiple_addresses .buttons-set {
+    margin: 10px 0;
+  }
+  .multiple-checkout {
+    position: relative;
+  }
+  .multiple-checkout .grand-total {
+    font-size: 1.5em;
+    text-align: left;
+  }
+  .multiple-checkout .grand-total big {
+    float: right;
+    font-size: 16px;
+  }
+  #multiship-addresses-table {
+    margin-top: 5px;
+    border: none;
+  }
+  #multiship-addresses-table input.qty:focus {
+    padding: 6px;
+  }
+  #multiship-addresses-table tfoot tr .last {
+    border-top: none;
+  }
+  .addresses {
+    margin: 15px 0;
+  }
+  #multiship-addresses-table h4 {
+    font-size: 12px;
+    margin: 0;
+    line-height: 18px;
+  }
+  .multiple_addresses {
+    margin-bottom: 30px;
+    background-color: #FFFFFF;
+    padding: 0 0 15px 0;
+  }
+  .multiple_addresses .title-buttons {
+    text-align: right;
+  }
+  .checkout-multishipping-success .multiple-checkout .buttons-set .button {
+    float: left;
+  }
+  .multiple-checkout .buttons-set .button {
+    float: right;
+  }
+  .page-title_multi {
+    display: inherit;
+  }
+  .addresses .title-buttons {
+    text-align: right;
+  }
+  .page-title_multi h2 {
+    font-size: 25px;
+    float: left;
+    font-family: 'Open Sans', sans-serif;
+    color: #000;
+    font-weight: 900;
+    text-transform: uppercase;
+    margin-top: auto;
+  }
+  .multiple-checkout .grand-total {
+    font-size: 1.5em;
+    text-align: right;
+  }
+  .multiple-checkout .grand-total .price {
+    font-size: 22px;
+  }
+    /* Account Login  */
+  .account-login {
+    margin-bottom: 15px;
+    background-color: #FFFFFF;
+    padding: 0px;
+    margin-top: 10px;
+  }
+  .account-login .page-title h2 {
+    font-size: 22px;
+  }
+  .account-login .form-list input.input-text {
+    background: #fff;
+    border: 1px solid #f7f7f7;
+    padding: 10px;
+    width: 80%;
+    margin-top: 5px;
+    outline: none;
+  }
+  .account-login .col2-set .col-1 {
+    float: left;
+    padding-bottom: 0;
+    padding: 0px;
+    text-align: left;
+    width: 48%;
+    min-height: 362px;
+    background: #f7f7f7;
+    border: 1px solid #eaeaea;
+    padding: 45px
+  }
+  .account-login .col2-set .col-2 {
+    float: right;
+    padding-bottom: 0;
+    padding: 0 0 0 55px;
+    text-align: left;
+    width: 48%;
+    background: #f7f7f7;
+    padding: 45px;
+    border: 1px solid #eaeaea;
+  }
+  .account-login strong {
+    font-size: 13px;
+    color: #333;
+    margin-bottom: 15px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    text-transform: uppercase
+  }
+  .account-login .content {
+    margin-top: 8px;
+    padding-top: 12px;
+  }
+  .account-login .content p {
+    margin-bottom: 10px;
+    font-size: 12px;
+  }
+  .account-login .content p.required {
+    font-size: 12px;
+  }
+  .account-login .content .form-list label {
+    font-size: 12px;
+    color: #333;
+    margin-bottom: 5px;
+  }
+  .required {
+    color: #ff0000;
+  }
+  /* FAQ */
+  .accordion-faq {
+    text-align: left;
+    position: relative;
+  }
+  .accordion-faq .panel {
+    border-radius: 0;}
+    .accordion-faq .panel .panel-heading {
+    padding: 0;
+    color: #fff;
+    border-radius: 0!important;
+    background: #333;
+  }
+  .accordion-faq .panel-heading a {
+    display: block;
+    position: relative;
+    background: #f8f8f8;
+    color: #333;
+    padding: 10px 5px 12px 15px;
+    border-radius: 0;
+    border-right: 48px solid #41ade2;
+    min-height: 50px;
+    text-decoration: none;
+    font-family: "Lato", sans-serif;
+    font-weight: bold;
+  }
+  .accordion-faq .collapsed .arrow-down {
+    display: block;
+  }
+  .accordion-faq .arrow-down, .accordion-faq .arrow-up {
+    position: absolute;
+    display: block;
+    width: 20px;
+    height: 20px;
+    font-size: 20px;
+    top: 50%;
+    margin-top: -15px;
+    right: -36px;
+    color: #fff;
+  }
+  .accordion-faq .arrow-down, .accordion-faq .collapsed .arrow-up {
+    display: none;
+  }
+  /* compare */
+  .table>thead>tr>th, .table>tbody>tr>th, .table>tfoot>tr>th, .table>thead>tr>td, .table>tbody>tr>td, .table>tfoot>tr>td {
+    padding: 8px;
+    line-height: 1.42857143;
+    vertical-align: top;
+    border-top: 1px solid #ddd;
+  }
+  .compare-table .product-shop-row td {
+    position: relative;
+    text-align: center !important;
+  }
+  .compare-table .btn-cancel {
+    position: absolute;
+    right: 0;
+    top: 5px;
+  }

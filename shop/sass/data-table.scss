@@ -1,0 +1,289 @@
+  /*------- 23. Data Table -------- */
+  
+  .data-table {
+    width: 100%;
+  }
+  .data-table th {
+    line-height: 20px;
+    padding: 10px;
+    font-weight: bold;
+    font-size: 12px;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  .data-table td {
+    line-height: 20px;
+    padding: 10px;
+    vertical-align: top;
+  }
+  .data-table th .tax-flag {
+    white-space: nowrap;
+    font-weight: normal;
+  }
+  .data-table td.label, .data-table th.label {
+    font-weight: normal;
+    background: #f8f8f8
+  }
+  .data-table input, data-table select, data-table textarea {
+    margin: 3px;
+  }
+  .data-table p {
+    margin: 10px 0;
+  }
+  .data-table .description {
+    margin: 10px 0;
+  }
+  /* Content Columns */
+  .col2-set .col-1 {
+    float: left;
+    width: 48%;
+    text-align: left;
+    border: 0px #336600 solid;
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
+  .col2-set .col-2 {
+    float: right;
+    width: 48%;
+    text-align: left;
+  }
+  .col2-set {
+    overflow: hidden;
+    padding: 8px 0 0;
+  }
+  /* Cart Totals */
+  .cart .totals table th, .cart .totals table td {
+    padding: 5px;
+    border: none;
+    background: none;
+    border: medium none;
+    box-shadow: none;
+    color: #333;
+  }
+  .cart .totals table th, .cart .totals table td strong {
+    font-weight: 900;
+    font-size: 12px;
+  }
+  .cart-collaterals {
+    margin-top: 20px;
+  }
+  .cart-collaterals .col2-set {
+    float: left;
+    margin: 0;
+    padding: 0;
+  }
+  .cart-collaterals .totals {
+  }
+  .totals h3 {
+    border-bottom: 1px solid #ddd;
+    color: #000;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 15px;
+    margin-bottom: 5px;
+    padding: 10px 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  .cart-collaterals .col2-set .col-2 {
+    width: 320px;
+  }
+  .totals .inner {
+    padding: 0px 0px 15px 0px;
+    background-color: #fff;
+    margin-top: 0px;
+  }
+  #shopping-cart-totals-table {
+    float: right;
+    width: 100%;
+    padding-bottom: 8px;
+  }
+  #shopping-cart-totals-table .price {
+    font-size: 14px;
+    color: #ff0000;
+  }
+  .table.shopping-cart-table-total > thead > tr > th, .table.shopping-cart-table-total > tbody > tr > th, .table.shopping-cart-table-total > tfoot > tr > th, .table.shopping-cart-table-total > thead > tr > td, .table.shopping-cart-table-total > tbody > tr > td, .table.shopping-cart-table-total > tfoot > tr > td {
+    border-top: none;
+  }
+  #shipping-zip-form p {
+    margin: 2px 0 4px;
+  }
+  #shipping-zip-form .form-list input.input-text {
+    width: 90%;
+  }
+  .discount {
+    margin: auto;
+  }
+  .discount label {
+    font-weight: normal;
+  }
+  .shipping {
+    margin: auto;
+  }
+  .shipping .form-list select {
+    width: 90%;
+    background-color: #F0F0F0;
+    border: 1px #f0f0f0 solid;
+    padding: 10px;
+  }
+  .shipping .form-list select:focus {
+    background-color: #fff;
+    border: 1px #ddd solid;
+    padding: 10px;
+  }
+  .shipping .form-list input.input-text {
+    width: 95%;
+  }
+  .cart-collaterals h3 {
+    font-size: 15px;
+    color: #000;
+    margin-bottom: 15px;
+    border-bottom: 1px #ddd solid;
+    padding: 10px 0;
+    font-family: 'Open Sans', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: auto;
+    font-weight: bold;
+  }
+  input.input-text, select, textarea {
+    background-color: #f0f0f0;
+    border: 1px #f1f1f1 solid;
+    padding: 10px;
+    outline: none;
+    color: #aaa;
+  }
+  #wishlist-table textarea {
+    padding: 10px;
+    height: 120px;
+      width: 96%;
+  }
+  input.input-text:focus, select:focus, textarea:focus {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 10px;
+    outline: none;
+  }
+  input#coupon_code {
+    margin: 8px 0;
+    width: 90%;
+  }
+  #shopping-cart-table {
+    border: none;
+    background-color: #FFFFFF;
+    text-align: left;
+  }
+  #shopping-cart-table input.qty {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: 1px solid #ddd;
+    font-size: 15px;
+    font-weight: normal;
+    margin: 0;
+    outline: medium none;
+    padding: 8px;
+    width: 50px;
+    text-align: center;
+  }
+  #shopping-cart-table a.remove-item {
+    background-color: #fff;
+    background-image: none;
+    color: #333;
+    cursor: pointer;
+    padding: 0px;
+    border-radius: 0px;
+    cursor: pointer;
+    text-decoration: none;
+    float: left;
+    transition: all 0.3s linear;
+    border: none;
+  }
+  #shopping-cart-table a.remove-item span {
+    display: none
+  }
+  #shopping-cart-table a.remove-item:before {
+    content: "\f014";
+    font-family: FontAwesome;
+    font-size: 14px;
+  }
+  #shopping-cart-table a.remove-item:hover {
+    padding: 0px;
+    color: #ff0000;
+  }
+  #shopping-cart-table .remove-item span span {
+    display: none;
+  }
+  #shopping-cart-table tfoot tr td.last {
+    border-top: none;
+  }
+  #shopping-cart-table dl {
+    margin: 0;
+    padding: 0;
+  }
+  #shopping-cart-table .item-options dd {
+    color: #CCCCCC;
+    margin: 0;
+  }
+  #shopping-cart-table h4 {
+    font-size: 12px;
+    font-weight: 900;
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: uppercase
+  }
+  #shipping-zip-form .form-list label {
+    display: block;
+  }
+  #shopping-cart-table .cart-price .price {
+    font-size: 12px;
+  }
+  .cart-table .btn-continue {
+    float: left;
+  }
+  .cart-table .btn-update, .cart-table .btn-empty {
+    float: right;
+    margin-left: 8px;
+  }
+  .cart .product-name a {
+    font-size: 14px;
+  }
+  #shopping-cart-table .data-table td {
+    vertical-align: middle;
+  }
+  .checkout a {
+    text-decoration: underline;
+    color: #33c5fb;
+  }
+  .checkout {
+    color: #666666;
+    padding-top: 5px;
+    text-align: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  button.button.btn-proceed-checkout {
+    background: #fdd922;
+    padding: 12px 5px;
+    color: #000;
+    width: 100%;
+    border: none;
+    margin-bottom:7px;
+  }
+  button.button.btn-proceed-checkout:hover {
+    background: #1c95d1;
+    border: none;
+    color: #fff;
+  }
+  button.button.btn-proceed-checkout:before {
+    content: "\f00c";
+    font-family: FontAwesome;
+    font-size: 20px;
+    padding-right: 5px;
+  }
+  button.button.btn-proceed-checkout span {
+    font-size: 18px;
+    font-weight: normal;
+  }
+  .crosssel {
+    margin: 35px 0px 15px;
+  }
+  .crosssel .new_title.center {
+    margin-bottom: 10px;
+  }

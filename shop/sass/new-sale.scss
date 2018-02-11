@@ -1,0 +1,165 @@
+/*--------- 7. New & Sale Label --------- */
+.new-box, .sale-box {
+  height: 40px;
+  overflow: hidden;
+  position: absolute;
+  text-align: center;
+  top: -1px;
+  width: 55px;
+  z-index: 10;
+}
+.new-box {
+  left: -1px;
+}
+.sale-box {
+  right: -1px;
+}
+.new-top-left {
+  left: 0px;
+  top: 0;
+  background: #fff;
+  letter-spacing: 1px;
+}
+.new-top-right {
+  background: none repeat scroll 0 0 #FFFFFF;
+  right: 0px;
+  top: 0;
+}
+.sale-top-right {
+  top: 0;
+  background: #fff;
+  letter-spacing: 1px;
+  right: 0px;
+}
+.sale-top-left {
+  left: 0px;
+  top: 0;
+  background: #fff;
+  letter-spacing: 1px;
+}
+.ie8 .new-label {
+  left: 0px;
+  top: 0px;
+  width: auto;
+  padding: 5px 15px;
+}
+.ie8 .new-label:after {
+  display: none;
+}
+.ie8 .new-label:before {
+  display: none;
+}
+.ie8 .sale-label {
+  right: 0px;
+  top: 0px;
+  width: auto;
+  padding: 5px 15px;
+}
+.ie8 .sale-label:after {
+  display: none;
+}
+.ie8 .sale-label:before {
+  display: none;
+}
+.ie8 .new-box {
+  top: -1px;
+  left: -1px;
+}
+.ie8 .sale-box {
+  right: -1px;
+  top: -1px;
+}
+.new-box, .sale-box {
+  position: fixed;
+  text-align: center;
+  top: -1px;
+  width: 55px;
+  z-index: 10;
+}
+.new-box {
+  left: 0;
+}
+.sale-box {
+  right: 0;
+  top: 0px;
+}
+.new-label {
+  font-size: 11px;
+  font-family: 'Open Sans', sans-serif;
+  color: #fff;
+  background: #ffc60a;
+  text-transform: uppercase;
+  padding: 0px;
+  text-align: center;
+  display: block;
+  position: absolute;
+  top: 0px;
+  z-index: 100;
+  font-weight: bold;
+  letter-spacing: 1px;
+  line-height: normal;
+  width: 45px;
+  height: 25px;
+  line-height: 25px;
+  margin-top: 0px;
+  margin-left: 0px;
+}
+.sale-label {
+  font-size: 11px;
+  font-family: 'Open Sans', sans-serif;
+  color: #fff;
+  background: #d12631;
+  text-transform: uppercase;
+  padding: 0px;
+  text-align: center;
+  display: block;
+  position: absolute;
+  top: 0px;
+  z-index: 100;
+  font-weight: bold;
+  letter-spacing: 1px;
+  line-height: normal;
+  width: 45px;
+  height: 25px;
+  line-height: 25px;
+  margin-top: 0px;
+  margin-right: 0px;
+}
+.product-view .product-img-box .new-label {
+  left: 15px;
+}
+.product-view .product-img-box .sale-label {
+  left: 15px;
+}
+.ie8 .new-label {
+  left: 0px;
+  top: 0px;
+  width: auto;
+  padding: 5px 15px;
+}
+.ie8 .new-label:after {
+  display: none;
+}
+.ie8 .new-label:before {
+  display: none;
+}
+.ie8 .sale-label {
+  right: 0px;
+  top: 0px;
+  width: auto;
+  padding: 5px 15px;
+}
+.ie8 .sale-label:after {
+  display: none;
+}
+.ie8 .sale-label:before {
+  display: none;
+}
+.ie8 .new-box {
+  top: -1px;
+  left: -1px;
+}
+.ie8 .sale-box {
+  right: -1px;
+  top: -1px;
+}

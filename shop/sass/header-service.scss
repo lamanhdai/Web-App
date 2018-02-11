@@ -1,0 +1,65 @@
+.header-service {
+  padding: 12px 0;
+  color: #777;
+  font-family: 'Open Sans', sans-serif;
+  letter-spacing: 0.5px;
+  line-height: 1.4em;
+  text-transform: uppercase;
+  overflow: hidden;
+  border-top: 1px #e5e5e5 solid;
+  border-bottom: 1px #e5e5e5 solid;
+}
+.header-service strong {
+  font-weight: 900;
+  color: #37a4d9
+}
+.icon-truck:before {
+  content: "\f0d1";
+}
+.icon-truck {
+  font-family: FontAwesome;
+  display: inline-block;
+  font-size: 18px;
+  margin: auto;
+  color: #37a4d9;
+  text-align: center;
+  width: 30px;
+  text-align: left;
+  padding-left: 0px;
+}
+.icon-money:before {
+  content: "\f0d6";
+}
+.icon-money {
+  font-family: FontAwesome;
+  display: inline-block;
+  font-size: 18px;
+  margin: auto;
+  color: #37a4d9;
+  width: 30px;
+  text-align: left;
+}
+.icon-support:before {
+  content: "\f0e6";
+}
+.icon-support {
+  font-family: FontAwesome;
+  display: inline-block;
+  font-size: 18px;
+  margin: auto;
+  color: #37a4d9;
+  width: 30px;
+  text-align: left;
+}
+.icon-dis:before {
+  content: "\f005";
+}
+.icon-dis {
+  font-family: FontAwesome;
+  display: inline-block;
+  font-size: 18px;
+  margin: auto;
+  color: #fd7e56;
+  width: 25px;
+  text-align: left;
+}

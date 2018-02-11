@@ -1,0 +1,83 @@
+/*-------- 14. Products slider --------- */
+.owl-item .item {
+  margin: 0 10px;
+}
+.slider-items-products {
+  position: relative;
+}
+.slider-items-products .item {
+  text-align: left;
+}
+.owl-buttons {
+  opacity: 1;
+}
+.slider-items-products .owl-buttons .owl-prev {
+  position: absolute;
+  right: 45px;
+  top: -46px;
+}
+.slider-items-products .owl-buttons .owl-next {
+  position: absolute;
+  right: 13px;
+  top: -46px;
+}
+.slider-items-products .owl-buttons .owl-prev a {
+  background-position: 0 100%;
+  left: 0;
+  top: 50%;
+}
+.slider-items-products .owl-buttons .owl-next a {
+  background-position: 100% 100%;
+  left: 0;
+  top: 50%;
+}
+.slider-items-products .owl-buttons .owl-next a:before {
+  font-family: 'FontAwesome';
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  content: "\f105";
+  text-transform: none;
+  font-size: 18px;
+  padding: 6px 6px 6px 6px;
+  line-height: 26px;
+}
+.slider-items-products .owl-buttons .owl-prev a:before {
+  font-family: 'FontAwesome';
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  content: "\f104";
+  text-transform: none;
+  font-size: 18px;
+  padding: 6px 4px;
+  line-height: 26px;
+}
+.slider-items-products .owl-buttons a {
+  background: #fff;
+  display: block;
+  height: 28px;
+  margin: -22px 0 0;
+  position: absolute;
+  top: 50%;
+  width: 28px;
+  z-index: 5;
+  border: 1px solid #999;
+  color: #000;
+  opacity: 0.5;
+  transition: color 300ms ease-in-out 0s, background-color 300ms ease-in-out 0s, background-position 300ms ease-in-out 0s;
+}
+.slider-items-products .owl-buttons a:hover {
+  background: #41ade2;
+  color: #fff;
+  border: 1px #41ade2 solid;
+}
+.product-flexslider {
+  margin: 20px -10px;
+}
+.slider-items-products .owl-buttons a:hover {
+  text-decoration: none;
+  opacity: 1;
+  color: #fff;
+  background: #1c95d1;
+}

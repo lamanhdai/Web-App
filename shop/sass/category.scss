@@ -1,0 +1,415 @@
+.category-description.std {
+  margin-bottom: 12px;
+}
+.cat-img-title {
+  display: block;
+  position: absolute;
+  bottom: 0;
+  width: 80%;
+  margin: 6%;
+  padding: 0;
+  top: 66%;
+  height: 30%;
+}
+.cat-img-title.cat-box {
+  margin: 0;
+  width: 50%;
+  left: 10%;
+  top: 30%;
+}
+.cat-img-title.cat-bg .cat-heading, .cat-img-title.cat-bg p {
+  color: #FFFFFF;
+}
+.cat-img-title .cat-heading {
+  font-size: 26px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 900;
+}
+.cat-img-title p {
+  font-size: 14px;
+}
+.cat-img-title .cat-heading, .cat-img-title p {
+  transition: color 450ms ease-in-out 0s, background-color 450ms ease-in-out 0s;
+  margin-bottom: 5px;
+}
+.cat-img-title p {
+  clear: left;
+  font-size: 12px;
+  line-height: 1em;
+  margin-bottom: 1px;
+  padding: 0.25em 0.5em;
+}
+.category-description .slider-items-products .owl-buttons .owl-next {
+  position: absolute;
+  right: 12px;
+  top: 48%;
+}
+.category-description .slider-items-products .owl-buttons .owl-next a:before {
+  font-size: 24px;
+}
+.category-description .slider-items-products .owl-buttons .owl-prev a:before {
+  font-size: 24px;
+}
+.category-description .slider-items-products .owl-buttons .owl-prev {
+  left: 12px;
+  position: absolute;
+  top: 48%;
+  background: none;
+}
+.category-description .owl-item .item {
+  margin: auto;
+}
+.category-description .product-flexslider {
+  margin: 0px;
+}
+.f-right, .right {
+  float: right !important;
+}
+.category-description .owl-item .item img {
+  width: 100%;
+}
+.category-image img {
+  width: 100%;
+}
+  /* Page Heading */
+.page-title {
+  padding: 0px 0px 10px 0px;
+  margin: 0 0 0px 0px;
+  overflow: hidden
+}
+.col2-right-layout .col-main .page-title {
+  padding: 0px 0px 4px 0px;
+  margin: 0 0 10px;
+}
+.page-title h1, .page-title h2 {
+  color: #000;
+  font-family: "Open Sans", sans-serif;
+  font-size: 22px;
+  font-weight: 900;
+  margin: 0;
+  padding: 0;
+  text-transform: uppercase;
+}
+.category-title {
+  padding: 0px 0px 10px 0px;
+  margin: 0 0 0px 0px;
+  overflow: hidden;
+  border-bottom: #ddd double
+}
+.category-title h1 {
+  color: #000;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 22px;
+  margin: 0;
+  padding: 0;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+  /* Pager */
+.pager {
+  margin: 0;
+  text-align: center;
+  padding: 0;
+}
+.pager .amount {
+  float: left;
+}
+.pager .limiter label {
+  float: left;
+  font-size: 12px;
+  padding: 6px 0;
+  margin-right: 10px;
+  display: inline;
+}
+.pager .pages {
+  margin: 0 0;
+}
+.pages .pagination {
+  margin: auto;
+}
+.pager .pages li {
+  display: inline-block;
+}
+.pager .pages li a {
+  box-shadow: none;
+  border: 1px solid #F3F3F3;
+  padding: 5px 10px;
+  border-radius: 0px;
+  color: #333;
+}
+.pages .pagination > .active > a, .pages .pagination > .active > span, .pages .pagination > .active > a:hover, .pages .pagination > .active > span:hover, .pages .pagination > .active > a:focus, .pages .pagination > .active > span:focus {
+  z-index: 2;
+  color: #fff;
+  cursor: default;
+  background-color: #37a4d9;
+  border-color: #37a4d9;
+}
+  /* Sorter */
+.sorter {
+  padding: 0;
+  margin: 0;
+}
+.sorter .actions {
+  float: left;
+}
+.sorter .view-mode {
+  float: left;
+  margin-top: 6px;
+  margin-right: 20px;
+  margin-left: 0px;
+}
+.sorter .sort-by {
+  float: left;
+  margin-top: 6px;
+}
+  /* Toolbar */
+
+.toolbar {
+  clear: both;
+  margin-top: 0px;
+  padding: 15px 0 0 0px;
+  display: inline-block;
+  width: 100%;
+}
+.toolbar .sorter {
+  float: left;
+}
+.toolbar-bottom {
+  margin-top: 0;
+}
+.toolbar .pager .pages ol {
+  float: none;
+}
+#sort-by .button-asc {
+  background-color: #f8f8f8;
+  box-shadow: none;
+  float: right;
+  height: 30px;
+  line-height: 28px;
+  margin-left: 5px;
+  text-align: center;
+  width: 30px;
+}
+#sort-by .button-desc {
+  background-color: #f8f8f8;
+  box-shadow: none;
+  float: right;
+  height: 30px;
+  line-height: 28px;
+  margin-left: 5px;
+  text-align: center;
+  width: 30px;
+}
+#sort-by {
+  float: right;
+  font-size: 12px;
+}
+#sort-by ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: inline;
+}
+#sort-by a:link, #sort-by a:visited {
+  color: #333;
+  text-decoration: none;
+}
+#sort-by li {
+  background: none repeat scroll 0 0 #fff;
+  cursor: pointer;
+  margin: 0 auto;
+  outline: medium none;
+  padding: 5px 10px;
+  position: relative;
+  width: 80px;
+  float: left;
+  color: #333;
+  border: 1px solid #F3F3F3;
+}
+#sort-by li li {
+  width: 80px;
+  margin-top: 0px;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+}
+#sort-by li li a:hover {
+  color: #37a4d9
+}
+#sort-by li:hover {
+  background-color: #fff;
+}
+#sort-by li li:hover {
+  background-color: #fff;
+  color: #37a4d9;
+}
+#sort-by ul ul {
+  position: absolute;
+  visibility: hidden;
+  left: -1px;
+  top: 27px;
+  background: none repeat scroll 0 0 #F8F8F8;
+  z-index: 10000;
+  border-top: none;
+  border: 1px #F0F0F0 solid;
+}
+#sort-by ul ul ul {
+  position: absolute;
+  left: 100%;
+  top: -2px;
+  border: solid 1px transparent;
+}
+#sort-by li:hover > ul {
+  visibility: visible;
+}
+a.button-asc.left span {
+  color:#999;
+  font-size:11px;}
+.right-arrow {
+  float: right;
+}
+.right-arrow:after {
+  content: "\f107";
+  font-family: 'FontAwesome';
+  color: #666;
+  font-size: 12px;
+}
+#limiter {
+  float: right;
+  font-size: 12px;
+  margin-top: 0px;
+}
+#limiter ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: inline;
+}
+#limiter a:link, #limiter a:visited {
+  text-decoration: none;
+  background-color: #fff;
+  border: 0px solid #ddd;
+  border-radius: 0px;
+  display: inline-block;
+  padding: 0px;
+}
+#limiter li {
+  background: none repeat scroll 0 0 #fff;
+  cursor: pointer;
+  margin: 0 auto;
+  outline: medium none;
+  padding: 5px 0px 5px 10px;
+  position: relative;
+  width: 50px;
+  float: left;
+  color: #333;
+  text-align: left;
+  border: 1px solid #F3F3F3;
+}
+#limiter .right-arrow {
+  float: right;
+  margin-left: 6px;
+}
+#limiter li li {
+  width: 50px;
+  border-top: 0px #F0F0F0 solid;
+}
+#limiter li li a:hover {
+  color: #37a4d9;
+}
+#limiter li:hover {
+  color: #fff;
+}
+#limiter ul ul {
+  position: absolute;
+  visibility: hidden;
+  left: -1px;
+  top: 27px;
+  background: none repeat scroll 0 0 #fff;
+  z-index: 10000;
+  color: #000;
+  border-top: none;
+  border: 0px #F0F0F0 solid;
+}
+#limiter ul ul ul {
+  position: absolute;
+  left: 100%;
+  top: -2px;
+  border: solid 1px transparent;
+}
+#limiter li:hover > ul {
+  visibility: visible;
+}
+  /* Category Toolbar, Pager */
+.toolbar .button-list {
+  background: url(../images/icon_list.png) no-repeat 10px 7px;
+  text-transform: none;
+  padding: 5px 8px 5px 30px;
+  color: #333;
+  border: 1px #f3f3f3 solid
+}
+.toolbar a.button-grid {
+  border: 1px #f3f3f3 solid;
+  background: url(../images/icon_grid.png) no-repeat 10px 7px;
+  background-color: #fff;
+  color: #333;
+  padding: 5px 8px 5px 30px;
+}
+.toolbar span.button-active.button-grid {
+  background: url(../images/icon_grid_act.png) no-repeat 10px 7px;
+  background-color: #37a4d9;
+  color: #fff;
+  padding: 5px 8px 5px 30px;
+  margin-right: 5px;
+  border: 1px #37a4d9 solid;
+}
+.toolbar span.button-active.button-list {
+  background: url(../images/icon_list_act.png) no-repeat 10px 7px;
+  background-color: #37a4d9;
+  color: #fff;
+  padding: 5px 8px 5px 30px;
+}
+.toolbar .pager {
+  text-align: left;
+  margin: 0 10px 0 0;
+  padding: 0;
+  float: right;
+  width: 45%;
+}
+.pager .amount, .sorter .amount {
+  padding-left: 10px;
+  margin-top: 4px;
+  display: inline-block;
+}
+.toolbar .pager .limiter {
+  margin-top: 2px;
+  float: left;
+}
+.toolbar-bottom .pager .limiter {
+  position: static;
+}
+.pager .button {
+  padding: 4px 5px;
+  background-color: #fff;
+}
+.pager .button :hover {
+  padding: 4px 5px;
+  background-color: #fff;
+}
+.toolbar .actions {
+  margin-right: 30px;
+}
+.pager .limiter label, .toolbar label {
+  display: inline;
+  float: left;
+  margin-right: 10px;
+  padding: 5px 0;
+  font-size: 12px;
+  font-weight: normal;
+}
+.toolbar .sorter .sort-by {
+  margin-right: 30px;
+}
+.pager .amount {
+  margin-right: 20px;
+}
