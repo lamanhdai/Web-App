@@ -1,6 +1,6 @@
 import React from 'react'
 
-export const DesktopNav = () => {
+const DesktopNav = () => {
   return(
     <ul id="nav" className="hidden-xs">
       <li id="nav-home" className="level0 parent drop-menu"><a href="index.html" className="active"><span>Home</span> </a>

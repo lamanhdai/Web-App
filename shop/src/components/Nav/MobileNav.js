@@ -1,6 +1,6 @@
 import React from 'react'
 
-export const MobileNav = () => {
+const MobileNav = () => {
   return(
     <div className="hidden-desktop" id="mobile-menu">
       <ul className="navmenu">

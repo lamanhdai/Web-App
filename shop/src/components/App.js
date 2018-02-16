@@ -2,6 +2,7 @@ import React from 'react';
 import Header from './Header/Header';
 import Nav from './Nav/Nav';
 import SideBar from './SideBar/SideBar';
+import Footer from './Footer/Footer';
 import ContestList from './ContestList';
 import Contest from './Contest';
 import * as api from '../api';
@@ -118,6 +119,7 @@ class App extends React.Component {
         <Header message={this.pageHeader()} />
         <Nav />
         <SideBar />
+        <Footer />
         {/* {this.currentContent()} */}
       </div>
     );

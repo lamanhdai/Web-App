@@ -1,6 +1,6 @@
 import React from 'react'
 
-export const SideBar = () => {
+const SideBar = () => {
   return(
     <div className="magik-slideshow wow bounceInUp animated" id="magik-slideshow">
       <div className="container">
