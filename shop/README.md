@@ -5,6 +5,7 @@ Build a shop by fullstack javascript
 - MERN
 - [react-bootstrap](https://react-bootstrap.github.io/getting-started/introduction)
 - [styled-components](https://www.styled-components.com/docs/basics)
+- [Design](https://drive.google.com/drive/u/0/folders/1ROrKHFKp9qzZ78mYshyw7zGe0X_7dEuO)
 
 ## Tutorial
 
