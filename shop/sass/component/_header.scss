@@ -79,31 +79,31 @@
     }
   }
 }
-a.block-language {
-  &:hover {
-    color: #bed6e2;
-    text-decoration: none;
-  }
-
+.block-language {
+  padding: 0;
+  &:hover,
+  &:active,
   &:focus {
-    color: #bed6e2;
-    text-decoration: none;
+    background-color: transparent;
+    box-shadow: none;
+    border: 0;
+    color: #fff;
   }
 }
 .block-currency {
+  padding: 0;
   background: none;
   box-shadow: none;
   border: none;
   color: #d1f0ff;
 
-  &:hover {
-    color: #fff;
-    text-decoration: none;
-  }
-
+  &:hover,
+  &:active,
   &:focus {
+    background-color: transparent;
+    box-shadow: none;
+    border: 0;
     color: #fff;
-    text-decoration: none;
   }
 
   &-wrapper {
@@ -140,6 +140,22 @@ a.block-language {
     font-weight: normal;
     padding: 0 5px;
     margin: auto;
+  }
+}
+
+.open {
+  > .dropdown-toggle {
+    &.block-language,
+    &.block-currency {
+      &:hover,
+      &:active,
+      &:focus {
+        background-color: transparent;
+        box-shadow: none;
+        border: 0;
+        color: #fff;
+      }
+    }
   }
 }
 

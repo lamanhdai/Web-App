@@ -1,42 +1,7 @@
 import React from 'react';
 import { Grid, Row, Col, Clearfix, ButtonToolbar, Dropdown, MenuItem } from 'react-bootstrap';
 
-const LanguageButton = [
-  {
-    url: "#",
-    photo: "images/english.png",
-    label: "English"
-  },
-  {
-    url: "#",
-    photo: "images/francais.png",
-    label: "French"
-  },
-  {
-    url: "#",
-    photo: "images/german.png",
-    label: "German"
-  }
-];
-
-const CurrencyButton = [
-  {
-    url: "#",
-    unit: "USD",
-    label: "$ - Dollar"
-  },
-  {
-    url: "#",
-    unit: "POU",
-    label: "£ - Pound"
-  },
-  {
-    url: "#",
-    unit: "EUR",
-    label: "€ - Euro"
-  },
-];
-
+// HTML, JS
 const LanguageDropdown = () => {
   return (
     <ButtonToolbar className="dropdown block-language-wrapper">
