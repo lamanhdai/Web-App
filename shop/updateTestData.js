@@ -6,18 +6,18 @@ MongoClient.connect(config.mongodbUri, (err, db) => {
   assert.equal(null, err);
 
   let contestCount = 0;
-  db.collection('contests').find({}).each((err, contest) => {
+  db.collection('category').find({}).each((err, contest) => {
     assert.equal(null, err);
     if (!contest) { return; }
 
     contestCount++;
-    db.collection('names')
+    db.collection('products')
       .find({ id: { $in: contest.nameIds }})
       .project({ _id: 1 })
       .toArray()
       .then(_ids => {
         const newIds = _ids.map(o => o._id);
-        db.collection('contests').updateOne(
+        db.collection('category').updateOne(
           { id: contest.id },
           { $set: { nameIds: newIds } }
         ).then(() => {

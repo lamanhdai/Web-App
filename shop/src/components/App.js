@@ -22,7 +22,7 @@ class App extends React.Component {
   componentDidMount() {
     onPopState((event) => {
       this.setState({
-        currentContestId: (event.state || {}).currentContestId
+        currentCategoryId: (event.state || {}).currentCategoryId
       });
     });
   }
@@ -31,27 +31,27 @@ class App extends React.Component {
   }
   fetchContest = (contestId) => {
     pushState(
-      { currentContestId: contestId },
+      { currentCategoryId: contestId },
       `/contest/${contestId}`
     );
     api.fetchContest(contestId).then(contest => {
       this.setState({
-        currentContestId: contest._id,
-        contests: {
-          ...this.state.contests,
-          [contest._id]: contest
+        currentCategoryId: category._id,
+        category: {
+          ...this.state.category,
+          [category._id]: contest
         }
       });
     });
   };
   fetchContestList = () => {
     pushState(
-      { currentContestId: null },
+      { currentCategoryId: null },
       '/'
     );
     api.fetchContestList().then(contests => {
       this.setState({
-        currentContestId: null,
+        currentCategoryId: null,
         contests
       });
     });
@@ -66,12 +66,12 @@ class App extends React.Component {
       });
     });
   };
-  currentContest() {
-    return this.state.contests[this.state.currentContestId];
+  currentCategory() {
+    return this.state.category[this.state.currentCategoryId];
   }
   pageHeader() {
-    if (this.state.currentContestId) {
-      return this.currentContest().contestName;
+    if (this.state.currentCategoryId) {
+      return this.currentCategory().contestName;
     }
 
     return 'Naming Contests';
@@ -87,9 +87,9 @@ class App extends React.Component {
   addName = (newName, contestId) => {
     api.addName(newName, contestId).then(resp =>
       this.setState({
-        contests: {
-          ...this.state.contests,
-          [resp.updatedContest._id]: resp.updatedContest
+        category: {
+          ...this.state.category,
+          [resp.updatedcategory._id]: resp.updatedContest
         },
         names: {
           ...this.state.names,
@@ -100,18 +100,18 @@ class App extends React.Component {
     .catch(console.error);
   };
   currentContent() {
-    if (this.state.currentContestId) {
+    if (this.state.currentCategoryId) {
       return <Contest
                contestListClick={this.fetchContestList}
                fetchNames={this.fetchNames}
                lookupName={this.lookupName}
                addName={this.addName}
-               {...this.currentContest()} />;
+               {...this.currentCategory()} />;
     }
 
     return <ContestList
             onContestClick={this.fetchContest}
-            contests={this.state.contests} />;
+            contests={this.state.category} />;
   }
   render() {
     return (

@@ -1,21 +1,21 @@
 import axios from 'axios';
 
-export const fetchContest = contestId => {
-  return axios.get(`/api/contests/${contestId}`)
+export const fetchCategory = categorytId => {
+  return axios.get(`/api/category/${categorytId}`)
               .then(resp => resp.data);
 };
 
-export const fetchContestList = () => {
-  return axios.get('/api/contests')
-              .then(resp => resp.data.contests);
+export const fetchCategoryList = () => {
+  return axios.get('/api/category')
+              .then(resp => resp.data.category);
 };
 
 export const fetchNames = nameIds => {
-  return axios.get(`/api/names/${nameIds.join(',')}`)
+  return axios.get(`/api/products/${nameIds.join(',')}`)
               .then(resp => resp.data.names);
 };
 
-export const addName = (newName, contestId) => {
-  return axios.post('/api/names', { newName, contestId })
+export const addName = (newName, categorytId) => {
+  return axios.post('/api/names', { newName, categorytId })
               .then(resp => resp.data);
 };

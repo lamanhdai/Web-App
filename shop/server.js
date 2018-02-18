@@ -27,7 +27,7 @@ hbs.registerHelper('json', function(context) {
   return JSON.stringify(context);
 });
 
-server.get(['/', '/contest/:contestId'], (req, res) => {
+server.get(['/', '/shop/:contestId'], (req, res) => {
   serverRender(req.params.contestId)
     .then(({ initialMarkup, initialData }) => {
       res.render('index', {
