@@ -1,13 +1,13 @@
 import axios from 'axios';
 
-export const fetchCategory = categorytId => {
-  return axios.get(`/api/category/${categorytId}`)
+export const fetchType = typetId => {
+  return axios.get(`/api/types/${typetId}`)
               .then(resp => resp.data);
 };
 
-export const fetchCategoryList = () => {
-  return axios.get('/api/category')
-              .then(resp => resp.data.category);
+export const fetchTypeList = () => {
+  return axios.get('/api/types')
+              .then(resp => resp.data.types);
 };
 
 export const fetchNames = nameIds => {
@@ -15,7 +15,7 @@ export const fetchNames = nameIds => {
               .then(resp => resp.data.names);
 };
 
-export const addName = (newName, categorytId) => {
-  return axios.post('/api/names', { newName, categorytId })
+export const addName = (newName, typetId) => {
+  return axios.post('/api/names', { newName, typetId })
               .then(resp => resp.data);
 };

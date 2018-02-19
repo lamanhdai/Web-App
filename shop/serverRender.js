@@ -6,31 +6,31 @@ import App from './src/components/App';
 import config from './config';
 import axios from 'axios';
 
-const getApiUrl = categoryId => {
-  if (categoryId) {
-    return `${config.serverUrl}/api/category/${categoryId}`;
+const getApiUrl = typeId => {
+  if (typeId) {
+    return `${config.serverUrl}/api/types/${typeId}`;
   }
-  return `${config.serverUrl}/api/category`;
+  return `${config.serverUrl}/api/types`;
 };
 
-const getInitialData = (categoryId, apiData) => {
-  if (categoryId) {
+const getInitialData = (typeId, apiData) => {
+  if (typeId) {
     return {
-      currentCategoryId: apiData._id,
-      category: {
+      currenttypeId: apiData._id,
+      types: {
         [apiData._id]: apiData
       }
     };
   }
   return {
-    category: apiData.category
+    types: apiData.types
   };
 };
 
-const serverRender = (categoryId) =>
-  axios.get(getApiUrl(categoryId))
+const serverRender = (typeId) =>
+  axios.get(getApiUrl(typeId))
     .then(resp => {
-      const initialData = getInitialData(categoryId, resp.data);
+      const initialData = getInitialData(typeId, resp.data);
       return {
         initialMarkup: ReactDOMServer.renderToString(
           <App initialData={initialData} />

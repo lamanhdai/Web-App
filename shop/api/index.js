@@ -12,22 +12,21 @@ MongoClient.connect(config.mongodbUri, (err, db) => {
 
 const router = express.Router();
 
-router.get('/contests', (req, res) => {
-  let contests = {};
-  mdb.collection('contests').find({})
+router.get('/types', (req, res) => {
+  let types = {};
+  mdb.collection('types').find({})
      .project({
-       categoryName: 1,
-       contestName: 1
+       typeName: 1,
      })
-     .each((err, contest) => {
+     .each((err, type) => {
        assert.equal(null, err);
 
-       if (!contest) { // no more contests
-         res.send({ contests });
+       if (!type) { // no more types
+         res.send({ types });
          return;
        }
 
-       contests[contest._id] = contest;
+       types[type._id] = type;
      });
 });
 
@@ -48,10 +47,10 @@ router.get('/names/:nameIds', (req, res) => {
 });
 
 
-router.get('/contests/:contestId', (req, res) => {
-  mdb.collection('contests')
-     .findOne({ _id: ObjectID(req.params.contestId) })
-     .then(contest => res.send(contest))
+router.get('/types/:typeId', (req, res) => {
+  mdb.collection('types')
+     .findOne({ _id: ObjectID(req.params.typeId) })
+     .then(type => res.send(type))
      .catch(error => {
        console.error(error);
        res.status(404).send('Bad Request');
@@ -59,18 +58,18 @@ router.get('/contests/:contestId', (req, res) => {
 });
 
 router.post('/names', (req, res) => {
-  const contestId = ObjectID(req.body.contestId);
+  const typeId = ObjectID(req.body.typeId);
   const name = req.body.newName;
   // validation ...
   mdb.collection('names').insertOne({ name }).then(result =>
-    mdb.collection('contests').findAndModify(
-      { _id: contestId },
+    mdb.collection('types').findAndModify(
+      { _id: typeId },
       [],
       { $push: { nameIds: result.insertedId } },
       { new: true }
     ).then(doc =>
       res.send({
-        updatedContest: doc.value,
+        updatedType: doc.value,
         newName: { _id: result.insertedId, name }
       })
     )

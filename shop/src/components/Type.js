@@ -1,6 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 
-class Contest extends Component {
+class Type extends Component {
   componentDidMount() {
     this.props.fetchNames(this.props.nameIds);
   }
@@ -11,13 +11,13 @@ class Contest extends Component {
   };
   render() {
     return (
-      <div className="Contest">
+      <div className="Type">
         <div className="panel panel-default">
           <div className="panel-heading">
-            <h3 className="panel-title">Contest Description</h3>
+            <h3 className="panel-title">Type Description</h3>
           </div>
           <div className="panel-body">
-            <div className="contest-description">
+            <div className="type-description">
               {this.props.description}
             </div>
           </div>
@@ -60,22 +60,22 @@ class Contest extends Component {
         </div>
 
         <div className="home-link link"
-             onClick={this.props.contestListClick}>
-          Contest List
+             onClick={this.props.typeListClick}>
+          Type List
         </div>
       </div>
     );
   }
 }
 
-Contest.propTypes = {
+Type.propTypes = {
   _id: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
-  contestListClick: PropTypes.func.isRequired,
+  typeListClick: PropTypes.func.isRequired,
   fetchNames: PropTypes.func.isRequired,
   nameIds: PropTypes.array.isRequired,
   lookupName: PropTypes.func.isRequired,
   addName: PropTypes.func.isRequired,
 };
 
-export default Contest;
+export default Type;

@@ -3,8 +3,8 @@ import Header from './Header/Header';
 import Nav from './Nav/Nav';
 import SideBar from './SideBar/SideBar';
 import Footer from './Footer/Footer';
-import ContestList from './ContestList';
-import Contest from './Contest';
+import TypeList from './TypeList';
+import Type from './Type';
 import * as api from '../api';
 
 const pushState = (obj, url) =>
@@ -22,37 +22,37 @@ class App extends React.Component {
   componentDidMount() {
     onPopState((event) => {
       this.setState({
-        currentCategoryId: (event.state || {}).currentCategoryId
+        currentTypeId: (event.state || {}).currentTypeId
       });
     });
   }
   componentWillUnmount() {
     onPopState(null);
   }
-  fetchContest = (contestId) => {
+  fetchType = (typeId) => {
     pushState(
-      { currentCategoryId: contestId },
-      `/contest/${contestId}`
+      { currentTypeId: typeId },
+      `/type/${typeId}`
     );
-    api.fetchContest(contestId).then(contest => {
+    api.fetchType(typeId).then(type => {
       this.setState({
-        currentCategoryId: category._id,
-        category: {
-          ...this.state.category,
-          [category._id]: contest
+        currentTypeId: type._id,
+        type: {
+          ...this.state.types,
+          [type._id]: type
         }
       });
     });
   };
-  fetchContestList = () => {
+  fetchTypeList = () => {
     pushState(
-      { currentCategoryId: null },
+      { currentTypeId: null },
       '/'
     );
-    api.fetchContestList().then(contests => {
+    api.fetchTypeList().then(type => {
       this.setState({
-        currentCategoryId: null,
-        contests
+        currentTypeId: null,
+        type
       });
     });
   };
@@ -66,15 +66,15 @@ class App extends React.Component {
       });
     });
   };
-  currentCategory() {
-    return this.state.category[this.state.currentCategoryId];
+  currentType() {
+    return this.state.types[this.state.currentTypeId];
   }
   pageHeader() {
-    if (this.state.currentCategoryId) {
-      return this.currentCategory().contestName;
+    if (this.state.currentTypeId) {
+      return this.currentType().typeName;
     }
 
-    return 'Naming Contests';
+    return 'Naming type';
   }
   lookupName = (nameId) => {
     if (!this.state.names || !this.state.names[nameId]) {
@@ -84,12 +84,12 @@ class App extends React.Component {
     }
     return this.state.names[nameId];
   };
-  addName = (newName, contestId) => {
-    api.addName(newName, contestId).then(resp =>
+  addName = (newName, typeId) => {
+    api.addName(newName, typeId).then(resp =>
       this.setState({
-        category: {
-          ...this.state.category,
-          [resp.updatedcategory._id]: resp.updatedContest
+        types: {
+          ...this.state.types,
+          [resp.updatedType._id]: resp.updatedType
         },
         names: {
           ...this.state.names,
@@ -100,18 +100,18 @@ class App extends React.Component {
     .catch(console.error);
   };
   currentContent() {
-    if (this.state.currentCategoryId) {
-      return <Contest
-               contestListClick={this.fetchContestList}
+    if (this.state.currentTypeId) {
+      return <Type
+               typeListClick={this.fetchTypeList}
                fetchNames={this.fetchNames}
                lookupName={this.lookupName}
                addName={this.addName}
-               {...this.currentCategory()} />;
+               {...this.currentType()} />;
     }
 
-    return <ContestList
-            onContestClick={this.fetchContest}
-            contests={this.state.category} />;
+    return <typeList
+            onTypeClick={this.fetchType}
+            types={this.state.types} />;
   }
   render() {
     return (
