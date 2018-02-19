@@ -23,9 +23,8 @@ Build a shop by fullstack javascript
 
 **Run on develop environment**
 - Step 1: run mongo server `mongod`
-- Step 2: run mongo database `mongo`
-- Step 3: run node server `npm start`
-- Step 4: run webpack `npm run dev`
-- Step 5: open in browser `localhost:8080`
+- Step 2: run node server `npm start`
+- Step 3: run webpack `npm run dev`
+- Step 4: open in browser `localhost:8080`
 
 => To run database for the first time run step 1, 2 and go to root directory run `babel-node loadTestData.js`
