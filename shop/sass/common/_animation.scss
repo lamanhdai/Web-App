@@ -1,0 +1,23 @@
+.fade {
+  &-enter {
+    opacity: 0.01;
+    max-height: 0;
+
+    &.fade-enter-active {
+      opacity: 1;
+      max-height: 99999px;
+      transition: opacity 1000ms ease-in, max-height 1000ms ease-in;
+    }
+  }
+
+  &-exit {
+    opacity: 1;
+    max-height: 99999px;
+
+    &.fade-exit-active {
+      opacity: 0.01;
+      max-height: 0;
+      transition: opacity 800ms ease-in, max-height 800ms ease-in;
+    }
+  }
+}

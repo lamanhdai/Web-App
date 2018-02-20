@@ -784,7 +784,8 @@ a.btn-button-st:hover {
   background: #535353;
 }
 #nav li.drop-menu ul {
-  display: none;
+  opacity: 0;
+  max-height: 0;
 }
 .custom-menu {
   overflow: hidden;
