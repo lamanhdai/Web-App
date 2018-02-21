@@ -1,23 +1,17 @@
-.fade {
-  &-enter {
-    opacity: 0.01;
-    max-height: 0;
-
-    &.fade-enter-active {
-      opacity: 1;
-      max-height: 99999px;
-      transition: opacity 1000ms ease-in, max-height 1000ms ease-in;
+#nav li.drop-menu .slide-menu {
+  &.slide {
+    &-down {
+      visibility: visible;
+      overflow: hidden;
+      max-height: 9999px;
+      transition: all 1000ms cubic-bezier(0, 1, 0.5, 1);
     }
-  }
-
-  &-exit {
-    opacity: 1;
-    max-height: 99999px;
-
-    &.fade-exit-active {
-      opacity: 0.01;
+  
+    &-up {
+      visibility: hidden;
+      overflow: hidden;
       max-height: 0;
-      transition: opacity 800ms ease-in, max-height 800ms ease-in;
+      transition: all 0s cubic-bezier(0, 1, 0.5, 1);
     }
   }
 }

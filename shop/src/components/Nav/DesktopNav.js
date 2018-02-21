@@ -1,12 +1,67 @@
 import React from 'react'
 import ReactCSSTransitionGroup from 'react-transition-group';
 
-class DesktopNav extends React.Component {
-  state = { show: false }
+const Fade = ({ children, ...props }) => (
+  <CSSTransition
+    {...props}
+    timeout={1000}
+    classNames="fade"
+  >
+    {children}
+  </CSSTransition>
+);
 
-  showSubMenu() {
+class DesktopNav extends React.Component {
+  state = {
+    show: false,
+    subMenu: [
+      {
+        link: "#",
+        text: "Submenu",
+        isHover: false,
+        childMenu: [
+          {
+            link: "#",
+            text: "Menu1",
+          },
+          {
+            link: "#",
+            text: "Menu2",
+          },
+          {
+            link: "#",
+            text: "Menu3",
+          },
+          {
+            link: "#",
+            text: "Menu4",
+          },
+          {
+            link: "#",
+            text: "Menu5",
+          }
+        ]
+      },
+      {
+        link: "#",
+        text: "Submenu",
+        isHover: false,
+        childMenu: []
+      }
+    ],
+  }
+
+  toggleSubMenu() {
     this.setState({
       show: !this.state.show
+    })
+  }
+
+  toggleChildMenu(index) {
+    
+    const subMenu = Object.assign({}, this.state.subMenu[index], {isHover: true});
+    this.setState({
+      subMenu
     })
   }
 
@@ -385,38 +440,40 @@ class DesktopNav extends React.Component {
           
           
         </li>
-        <li className="level0 parent drop-menu" onMouseEnter={() => this.showSubMenu()}>
+        <li
+          className="level0 parent drop-menu"
+          onMouseEnter={() => this.toggleSubMenu()}
+          onMouseLeave={() => this.toggleSubMenu()}
+        >
           <a href="grid.html"><span>Sub menu</span>
           </a>
-          <ReactCSSTransitionGroup
-            transitionName="fade"
-            transitionEnterTimeout={500}
-            transitionLeaveTimeout={300}
-          >
-            <ul className="level1">
-              <li className="level1 first parent"><a href="grid"><span>Submenu</span></a>
-                <ul className="level2">
-                  <li className="level2 first"><a href="#"><span>Menu1</span></a></li>
-                  <li className="level2 nav-1-1-2"><a href="#"><span>Menu1</span></a></li>
-                  <li className="level2 nav-1-1-3"><a href="#"><span>Menu2</span></a></li>
-                  <li className="level2 nav-1-1-4"><a href="#"><span>Menu3</span></a></li>
-                  <li className="level2 nav-1-1-5 last"><a href="#"><span>Menu4</span></a></li>
-                </ul>
+          <ul className={`level1 slide-menu ${this.state.show ? 'slide-down' : 'slide-up'}`}>
+            {this.state.subMenu.map((item, i) => (
+              <li
+                className="level1 first parent"
+                onMouseEnter={() => this.toggleChildMenu(i)}
+                onMouseLeave={() => this.toggleChildMenu(i)}
+                key={item}
+              >
+                <Fade in={item.isHover}>
+                  <a href="grid"><span>Submenu</span></a>
+                  <ul className="level2">
+                    <li className="level2 first"><a href="#"><span>Menu1</span></a></li>
+                    <li className="level2 nav-1-1-2"><a href="#"><span>Menu1</span></a></li>
+                    <li className="level2 nav-1-1-3"><a href="#"><span>Menu2</span></a></li>
+                    <li className="level2 nav-1-1-4"><a href="#"><span>Menu3</span></a></li>
+                    <li className="level2 nav-1-1-5 last"><a href="#"><span>Menu4</span></a></li>
+                  </ul>
+                </Fade>
               </li>
-              <li className="level1 first parent"><a href="#"><span>Submenu</span></a>
-                <ul className="level2">
-                  <li className="level2 first"><a href="#"><span>Menu1</span></a></li>
-                  <li className="level2 nav-1-1-2"><a href="#"><span>Menu1</span></a></li>
-                  <li className="level2 nav-1-1-3"><a href="#"><span>Menu2</span></a></li>
-                  <li className="level2 nav-1-1-4"><a href="#"><span>Menu3</span></a></li>
-                  <li className="level2 nav-1-1-5 last"><a href="#"><span>Menu4</span></a></li>
-                </ul>
-              </li>
-              <li className="level1 parent"><a href="#"><span>Submenu</span></a> </li>
-            </ul>
-          </ReactCSSTransitionGroup>
+            ))}
+            <li className="level1 parent">
+              <a href="#"><span>Submenu</span></a>
+            </li>
+          </ul>
         </li>
-        <li className="nav-custom-link level0 level-top parent"> <a className="level-top" href="#"><span>Custom</span></a>
+        <li className="nav-custom-link level0 level-top parent">
+          <a className="level-top" href="#"><span>Custom</span></a>
           <div className="level0-wrapper custom-menu">
             <div className="header-nav-dropdown-wrapper clearer">
               <div className="grid12-5">

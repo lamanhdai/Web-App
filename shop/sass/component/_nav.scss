@@ -324,8 +324,6 @@ li.level0 > a:hover > span > .pin-bottom:before, #nav li.level0:hover > a > span
 #nav .level0-wrapper, #nav.classic ul.level0 {
   top: 43px;
   left: 0px !important;
-  -webkit-transform: scaleY(0);
-  transform: scaleY(0);
   -webkit-transform-origin: 50% 0;
   transform-origin: 50% 0;
   -webkit-transition-property: transform;
@@ -336,25 +334,17 @@ li.level0 > a:hover > span > .pin-bottom:before, #nav li.level0:hover > a > span
   transition-timing-function: ease-out;
 }
 #nav li.level0 .level0-wrapper {
-  -webkit-transform: scaleY(0);
-  transform: scaleY(0);
-  -webkit-transform-origin: 50% 0;
-  transform-origin: 50% 0;
-  -webkit-transition-property: transform;
-  transition-property: transform;
   -webkit-transition-duration: 0.3s;
   transition-duration: 0.3s;
   -webkit-transition-timing-function: ease-out;
   transition-timing-function: ease-out;
   opacity: 0;
   visibility: hidden;
-  display: block!important
+  display: block!important;
 }
 #nav li.level0:hover .level0-wrapper {
   opacity: 1;
   visibility: visible;
-  -webkit-transform: scaleY(1);
-  transform: scaleY(1);
 }
 #nav > li > a {
   color: #fff;
@@ -728,7 +718,7 @@ a.btn-button-st:hover {
 }
 #nav li.drop-menu ul {
   position: absolute;
-  top: 43px;
+  top: 100%;
   left: 0;
   background: #fafafa;
   padding: 6px 0;
@@ -737,20 +727,10 @@ a.btn-button-st:hover {
   box-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
   width: 160px;
   text-align: left;
-  -webkit-transform: scaleY(0);
-  transform: scaleY(0);
-  -webkit-transform-origin: 50% 0;
-  transform-origin: 50% 0;
-  -webkit-transition-property: transform;
-  transition-property: transform;
-  -webkit-transition-duration: 0.5s;
-  transition-duration: 0.5s;
-  -webkit-transition-timing-function: ease-out;
-  transition-timing-function: ease-out;
+  display: none;
 }
 #nav li.drop-menu:hover ul {
-  -webkit-transform: scaleY(1);
-  transform: scaleY(1);
+  display: block;
 }
 #nav > li.drop-menu ul li ul {
   border-top: none;
@@ -783,7 +763,7 @@ a.btn-button-st:hover {
   width: 7px;
   background: #535353;
 }
-#nav li.drop-menu ul {
+#nav li.drop-menu ul ul {
   opacity: 0;
   max-height: 0;
 }
