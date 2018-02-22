@@ -430,7 +430,6 @@ li.level0 > a:hover > span > .pin-bottom:before, #nav li.level0:hover > a > span
 #nav li.drop-menu ul ul.level2 {
   margin: 7px 0;
   padding: 0;
-  position: static;
   top: 0px;
   left: 0;
   display: none;
@@ -771,10 +770,6 @@ a.btn-button-st:hover {
   height: 1px;
   width: 7px;
   background: #535353;
-}
-#nav li.drop-menu ul ul {
-  opacity: 0;
-  max-height: 0;
 }
 .custom-menu {
   overflow: hidden;

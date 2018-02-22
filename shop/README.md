@@ -20,6 +20,7 @@ Build a shop by fullstack javascript
 
 ## How to use
 - [Mongodb 2.2](http://mongodb.github.io/node-mongodb-native/2.2/api/)
+- [Basic react code](bk/)
 
 **Run on develop environment**
 - Step 1: run mongo server `mongod`
@@ -27,4 +28,4 @@ Build a shop by fullstack javascript
 - Step 3: run webpack `npm run dev`
 - Step 4: open in browser `localhost:8080`
 
-=> To run database for the first time run step 1, 2 and go to root directory run `babel-node loadTestData.js`
+=> To run database for the first time run step 1 and go to root directory run `babel-node loadTestData.js`

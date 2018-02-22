@@ -17,16 +17,18 @@ class DesktopNavSubMenu extends React.Component {
               key={item.text}
             >
               <a href="grid"><span>Submenu</span></a>
-              <ul className={`level2 ${item.isHover ? 'right-menu': ''}`}>
-                {item.childMenu.map((subItem, i) => (
-                  <li
-                    className={`level2 ${i === 0 ? 'first' : `nav-1-1-${i}`}`}
-                    key={JSON.stringify(subItem)}
-                  >
-                    <a href="#"><span>subItem.text</span></a>
-                  </li>
-                ))}
-              </ul>
+              {item.childMenu.length ? (
+                  <ul className={`level2 ${item.isHover ? 'right-menu': ''}`}>
+                    {item.childMenu.map((subItem, i) => (
+                      <li
+                        className={`level2 ${i === 0 ? 'first' : `nav-1-1-${i}`}`}
+                        key={JSON.stringify(subItem)}
+                      >
+                        <a href="#"><span>subItem.text</span></a>
+                      </li>
+                    ))}
+                  </ul>
+                ) : ('') }
             </li>
           ))}
       </ul>
