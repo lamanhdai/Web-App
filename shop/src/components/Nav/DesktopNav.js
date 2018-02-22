@@ -1,19 +1,10 @@
-import React from 'react'
-import ReactCSSTransitionGroup from 'react-transition-group';
-
-const Fade = ({ children, ...props }) => (
-  <CSSTransition
-    {...props}
-    timeout={1000}
-    classNames="fade"
-  >
-    {children}
-  </CSSTransition>
-);
+import React from 'react';
+import DesktopNavSubMenu from './DesktopNavSubMenu';
 
 class DesktopNav extends React.Component {
   state = {
     show: false,
+    showSubMenu: false,
     subMenu: [
       {
         link: "#",
@@ -44,7 +35,7 @@ class DesktopNav extends React.Component {
       },
       {
         link: "#",
-        text: "Submenu",
+        text: "Submenu1",
         isHover: false,
         childMenu: []
       }
@@ -58,10 +49,15 @@ class DesktopNav extends React.Component {
   }
 
   toggleChildMenu(index) {
-    
-    const subMenu = Object.assign({}, this.state.subMenu[index], {isHover: true});
+    let subMenu = [...this.state.subMenu];
+    for(let i=0;i<subMenu.length;i++) {
+      if(i === index) {
+        subMenu[i].isHover = true;
+      } else subMenu[i].isHover = false;
+    }
     this.setState({
-      subMenu
+      subMenu: subMenu,
+      showSubMenu: !this.state.showSubMenu
     })
   }
 
@@ -447,29 +443,32 @@ class DesktopNav extends React.Component {
         >
           <a href="grid.html"><span>Sub menu</span>
           </a>
+          <DesktopNavSubMenu
+            show={this.state.show}
+            subMenu={this.state.subMenu}
+            toggleChildMenu={this.toggleChildMenu}
+          ></DesktopNavSubMenu>
           <ul className={`level1 slide-menu ${this.state.show ? 'slide-down' : 'slide-up'}`}>
-            {this.state.subMenu.map((item, i) => (
-              <li
-                className="level1 first parent"
-                onMouseEnter={() => this.toggleChildMenu(i)}
-                onMouseLeave={() => this.toggleChildMenu(i)}
-                key={item}
-              >
-                <Fade in={item.isHover}>
+              {this.state.subMenu.map((item, i) => (
+                <li
+                  className="level1 first parent"
+                  onMouseEnter={() => this.toggleChildMenu(i)}
+                  onMouseLeave={() => this.toggleChildMenu(i)}
+                  key={item.text}
+                >
                   <a href="grid"><span>Submenu</span></a>
                   <ul className="level2">
-                    <li className="level2 first"><a href="#"><span>Menu1</span></a></li>
-                    <li className="level2 nav-1-1-2"><a href="#"><span>Menu1</span></a></li>
-                    <li className="level2 nav-1-1-3"><a href="#"><span>Menu2</span></a></li>
-                    <li className="level2 nav-1-1-4"><a href="#"><span>Menu3</span></a></li>
-                    <li className="level2 nav-1-1-5 last"><a href="#"><span>Menu4</span></a></li>
+                    {item.childMenu.map((subItem, i) => (
+                      <li
+                        className={`level2 ${i === 0 ? 'first' : `nav-1-1-${i}`}`}
+                        key={JSON.stringify(subItem)}
+                      >
+                        <a href="#"><span>subItem.text</span></a>
+                      </li>
+                    ))}
                   </ul>
-                </Fade>
-              </li>
-            ))}
-            <li className="level1 parent">
-              <a href="#"><span>Submenu</span></a>
-            </li>
+                </li>
+              ))}
           </ul>
         </li>
         <li className="nav-custom-link level0 level-top parent">

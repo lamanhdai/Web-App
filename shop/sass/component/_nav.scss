@@ -427,10 +427,19 @@ li.level0 > a:hover > span > .pin-bottom:before, #nav li.level0:hover > a > span
   color: #1c95d1;
 }
   /* 4th level */
-#nav ul.level2 {
+#nav li.drop-menu ul ul.level2 {
   margin: 7px 0;
   padding: 0;
   position: static;
+  top: 0px;
+  left: 0;
+  display: none;
+
+  &.right-menu {
+    top: 0;
+    left: 158px;
+    display: block;
+  }
 }
 #nav ul.level2 a {
   font-size: 0.9166em;
