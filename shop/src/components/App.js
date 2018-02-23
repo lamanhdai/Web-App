@@ -1,4 +1,6 @@
 import React from 'react';
+import 'velocity-animate';
+import 'velocity-animate/velocity.ui';
 import Header from './Header/Header';
 import Nav from './Nav/Nav';
 import SideBar from './SideBar/SideBar';
