@@ -4,14 +4,21 @@ import { Collapse } from 'react-collapse';
 class MobileNav extends React.Component {
   state = {
     show: false,
+    showSubMenuIndex: -1
   }
   toggleMenu() {
     this.setState({
       show: !this.state.show
     });
   }
+  toggleSubMenu(index) {
+    const checkIndex = this.state.showSubMenuIndex < 0 ? index : -1;
+    this.setState({
+      showSubMenuIndex: checkIndex
+    });
+  }
   render() {
-    const {show} = this.state;
+    const {show, showSubMenuIndex } = this.state;
 
     return(
       <div className="hidden-desktop" id="mobile-menu">
@@ -25,7 +32,7 @@ class MobileNav extends React.Component {
               </div>
               <h2>Menu</h2>
             </div>
-            <Collapse isOpened={show}>
+            <Collapse isOpened={show} hasNestedCollapse>
               <ul className="submenu" ref="subMenu">
                 <li>
                   <ul className="topnav">
@@ -129,49 +136,51 @@ class MobileNav extends React.Component {
                         </li>
                       </ul>
                     </li>
-                    <li className="level0 nav-3 level-top parent"> <a href="grid.html" className="level-top"> <span>Jewellery</span> </a><em>+</em>
-                      <ul className="level0">
-                        <li className="level1 nav-3-1 first parent"> <a href="grid.html"> <span>Precious Jewellery</span> </a><em>+</em>
-                          <ul className="level1">
-                            <li className="level2 nav-3-1-1 first"> <a href="grid.html"> <span>Gitanjali</span> </a> </li>
-                            <li className="level2 nav-3-1-2"> <a href="grid.html"> <span>Tara</span> </a> </li>
-                            <li className="level2 nav-3-1-3"> <a href="grid.html"> <span>Orra</span> </a> </li>
-                            <li className="level2 nav-3-1-4 last"> <a href="grid.html"> <span>Ahilya</span> </a> </li>
-                          </ul>
-                        </li>
-                        <li className="level1 nav-3-2 parent"> <a href="grid.html"> <span>Fashion Jewellery</span> </a><em>+</em>
-                          <ul className="level1">
-                            <li className="level2 nav-3-2-5 first"> <a href="grid.html"> <span>Earrings</span> </a> </li>
-                            <li className="level2 nav-3-2-6"> <a href="grid.html"> <span>Rings</span> </a> </li>
-                            <li className="level2 nav-3-2-7"> <a href="grid.html"> <span>Bangles &amp; Bracelets</span> </a> </li>
-                            <li className="level2 nav-3-2-8 last"> <a href="grid.html"> <span>Pendants</span> </a> </li>
-                          </ul>
-                        </li>
-                        <li className="level1 nav-3-3 parent"> <a href="grid.html"> <span>Mens Jewellery</span> </a><em>+</em>
-                          <ul className="level1">
-                            <li className="level2 nav-3-3-9 first"> <a href="grid.html"> <span>Neck Wear</span> </a> </li>
-                            <li className="level2 nav-3-3-10"> <a href="grid.html"> <span>Cufflinks</span> </a> </li>
-                            <li className="level2 nav-3-3-11"> <a href="grid.html"> <span>Wrist Wear</span> </a> </li>
-                            <li className="level2 nav-3-3-12 last"> <a href="grid.html"> <span>Rings</span> </a> </li>
-                          </ul>
-                        </li>
-                        <li className="level1 nav-3-4 parent"> <a href="grid.html"> <span>Designer</span> </a><em>+</em>
-                          <ul className="level1">
-                            <li className="level2 nav-3-4-13 first"> <a href="grid.html"> <span>Bbling</span> </a> </li>
-                            <li className="level2 nav-3-4-14"> <a href="grid.html"> <span>Ciana</span> </a> </li>
-                            <li className="level2 nav-3-4-15"> <a href="grid.html"> <span>Bansri</span> </a> </li>
-                            <li className="level2 nav-3-4-16 last"> <a href="grid.html"> <span>Arsya</span> </a> </li>
-                          </ul>
-                        </li>
-                        <li className="level1 nav-3-5 last parent"> <a href="grid.html"> <span>Platinum</span> </a><em>+</em>
-                          <ul className="level1">
-                            <li className="level2 nav-3-5-17 first"> <a href="grid.html"> <span>Earrings</span> </a> </li>
-                            <li className="level2 nav-3-5-18"> <a href="grid.html"> <span>Rings</span> </a> </li>
-                            <li className="level2 nav-3-5-19"> <a href="grid.html"> <span>Bangles &amp; Bracelets</span> </a> </li>
-                            <li className="level2 nav-3-5-20 last"> <a href="grid.html"> <span>Pendants</span> </a> </li>
-                          </ul>
-                        </li>
-                      </ul>
+                    <li className="level0 nav-3 level-top parent"> <a href="grid.html" className="level-top"> <span>Jewellery</span> </a><em onClick={() => this.toggleSubMenu(1)}>+</em>
+                      <Collapse isOpened={showSubMenuIndex === 1 ? true: false} hasNestedCollapse>
+                        <ul className="level0">
+                          <li className="level1 nav-3-1 first parent"> <a href="grid.html"> <span>Precious Jewellery</span> </a><em>+</em>
+                            <ul className="level1">
+                              <li className="level2 nav-3-1-1 first"> <a href="grid.html"> <span>Gitanjali</span> </a> </li>
+                              <li className="level2 nav-3-1-2"> <a href="grid.html"> <span>Tara</span> </a> </li>
+                              <li className="level2 nav-3-1-3"> <a href="grid.html"> <span>Orra</span> </a> </li>
+                              <li className="level2 nav-3-1-4 last"> <a href="grid.html"> <span>Ahilya</span> </a> </li>
+                            </ul>
+                          </li>
+                          <li className="level1 nav-3-2 parent"> <a href="grid.html"> <span>Fashion Jewellery</span> </a><em>+</em>
+                            <ul className="level1">
+                              <li className="level2 nav-3-2-5 first"> <a href="grid.html"> <span>Earrings</span> </a> </li>
+                              <li className="level2 nav-3-2-6"> <a href="grid.html"> <span>Rings</span> </a> </li>
+                              <li className="level2 nav-3-2-7"> <a href="grid.html"> <span>Bangles &amp; Bracelets</span> </a> </li>
+                              <li className="level2 nav-3-2-8 last"> <a href="grid.html"> <span>Pendants</span> </a> </li>
+                            </ul>
+                          </li>
+                          <li className="level1 nav-3-3 parent"> <a href="grid.html"> <span>Mens Jewellery</span> </a><em>+</em>
+                            <ul className="level1">
+                              <li className="level2 nav-3-3-9 first"> <a href="grid.html"> <span>Neck Wear</span> </a> </li>
+                              <li className="level2 nav-3-3-10"> <a href="grid.html"> <span>Cufflinks</span> </a> </li>
+                              <li className="level2 nav-3-3-11"> <a href="grid.html"> <span>Wrist Wear</span> </a> </li>
+                              <li className="level2 nav-3-3-12 last"> <a href="grid.html"> <span>Rings</span> </a> </li>
+                            </ul>
+                          </li>
+                          <li className="level1 nav-3-4 parent"> <a href="grid.html"> <span>Designer</span> </a><em>+</em>
+                            <ul className="level1">
+                              <li className="level2 nav-3-4-13 first"> <a href="grid.html"> <span>Bbling</span> </a> </li>
+                              <li className="level2 nav-3-4-14"> <a href="grid.html"> <span>Ciana</span> </a> </li>
+                              <li className="level2 nav-3-4-15"> <a href="grid.html"> <span>Bansri</span> </a> </li>
+                              <li className="level2 nav-3-4-16 last"> <a href="grid.html"> <span>Arsya</span> </a> </li>
+                            </ul>
+                          </li>
+                          <li className="level1 nav-3-5 last parent"> <a href="grid.html"> <span>Platinum</span> </a><em>+</em>
+                            <ul className="level1">
+                              <li className="level2 nav-3-5-17 first"> <a href="grid.html"> <span>Earrings</span> </a> </li>
+                              <li className="level2 nav-3-5-18"> <a href="grid.html"> <span>Rings</span> </a> </li>
+                              <li className="level2 nav-3-5-19"> <a href="grid.html"> <span>Bangles &amp; Bracelets</span> </a> </li>
+                              <li className="level2 nav-3-5-20 last"> <a href="grid.html"> <span>Pendants</span> </a> </li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </Collapse>
                     </li>
                     <li className="level0 nav-10 level-top "> <a className="level-top" href="blog.html"> <span>Custom</span> </a> </li>
                   </ul>
