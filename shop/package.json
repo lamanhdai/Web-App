@@ -33,6 +33,7 @@
     "react-collapse": "4.0.3",
     "react-dom": "15.6.2",
     "react-motion": "0.5.2",
+    "react-rev-slider": "1.0.1",
     "react-transition-group": "^2.2.1",
     "styled-components": "3.1.6"
   },
