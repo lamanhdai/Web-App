@@ -1,5 +1,103 @@
 import React from 'react'
 
+const categories = [
+  {
+    "name": "Women",
+    "subCategories": [
+      {
+        "name": "Styliest Bag",
+        "childCategories": [
+          {
+            "name": "Clutch Handbags"
+          },
+          {
+            "name": "Diaper Bags"
+          },
+          {
+            "name": "Bags"
+          },
+          {
+            "name": "Hobo Handbags"
+          },
+        ]
+      },
+      {
+        "name": "Material Bag",
+        "childCategories": [
+          {
+            "name": "Beaded Handbags"
+          },
+          {
+            "name": "Fabric Handbags"
+          },
+          {
+            "name": "Handbags"
+          },
+          {
+            "name": "Leather Handbags"
+          },
+        ]
+      },
+      {
+        "name": "Designer Bag",
+        "childCategories": [
+          {
+            "name": "Flat Shoes"
+          },
+          {
+            "name": "Flat Sandals"
+          },
+          {
+            "name": "Boots"
+          },
+          {
+            "name": "Heels"
+          },
+        ]
+      },
+      {
+        "name": "Cotton Bag",
+        "childCategories": [
+          {
+            "name": "Bracelets"
+          },
+          {
+            "name": "Necklaces &amp; Pendants"
+          },
+          {
+            "name": "Pendants"
+          },
+          {
+            "name": "Pins &amp; Brooches"
+          },
+        ]
+      },
+    ]
+        
+  },
+  {
+    "name": "Men",
+    "subCategories": [
+      {
+        "name": "Shoes",
+        "childCategories": [
+          {
+            "name": "Sport Shoes"
+          },
+          {
+            "name": "Casual Shoes"
+          },
+          {
+            "name": "Leather Shoes"
+          },
+          {
+            "name": "Canvas shoes"
+          },
+        ]
+      },
+    ]
+  }
+];
 const SideMenu = () => {
   return (
     <div id="magik-verticalmenu" className="block magik-verticalmenu">
@@ -21,7 +119,7 @@ const SideMenu = () => {
                           <div className="mega-col col-sm-66" data-widgets="wid-5" data-colwidth="6">
                             <div className="mega-col-inner">
                               <div className="ves-widget">
-                                <div className="menu-title">Styliest Bag </div>
+                                <div className="menu-title">Styliest Bag</div>
                                 <div className="widget-html">
                                   <div className="widget-inner">
                                     <ul>
