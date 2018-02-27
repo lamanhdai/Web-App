@@ -1,7 +1,7 @@
 import React from 'react';
 import Header from './Header/Header';
 import Nav from './Nav/Nav';
-import SideBar from './SideBar/SideBar';
+import FrontPageContent from './FrontPageContent/FrontPageContent';
 import Footer from './Footer/Footer';
 import TypeList from './TypeList';
 import Type from './Type';
@@ -118,7 +118,7 @@ class App extends React.Component {
       <div className="App page">
         <Header message={this.pageHeader()} />
         <Nav />
-        <SideBar />
+        <FrontPageContent />
         <Footer />
         {/* {this.currentContent()} */}
       </div>
