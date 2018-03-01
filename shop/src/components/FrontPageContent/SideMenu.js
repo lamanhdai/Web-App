@@ -1,81 +1,78 @@
 import React from 'react'
 
-const categories = [
-  {
-    "name": "Women",
-    "subCategories": [
-      {
-        "name": "Styliest Bag",
-        "childCategories": [
-          {
-            "name": "Clutch Handbags"
-          },
-          {
-            "name": "Diaper Bags"
-          },
-          {
-            "name": "Bags"
-          },
-          {
-            "name": "Hobo Handbags"
-          },
-        ]
-      },
-      {
-        "name": "Material Bag",
-        "childCategories": [
-          {
-            "name": "Beaded Handbags"
-          },
-          {
-            "name": "Fabric Handbags"
-          },
-          {
-            "name": "Handbags"
-          },
-          {
-            "name": "Leather Handbags"
-          },
-        ]
-      },
-      {
-        "name": "Designer Bag",
-        "childCategories": [
-          {
-            "name": "Flat Shoes"
-          },
-          {
-            "name": "Flat Sandals"
-          },
-          {
-            "name": "Boots"
-          },
-          {
-            "name": "Heels"
-          },
-        ]
-      },
-      {
-        "name": "Cotton Bag",
-        "childCategories": [
-          {
-            "name": "Bracelets"
-          },
-          {
-            "name": "Necklaces &amp; Pendants"
-          },
-          {
-            "name": "Pendants"
-          },
-          {
-            "name": "Pins &amp; Brooches"
-          },
-        ]
-      },
-    ]
-        
-  },
-];
+const categories = {
+  "name": "Women",
+  "subCategories": [
+    {
+      "name": "Styliest Bag",
+      "childCategories": [
+        {
+          "name": "Clutch Handbags"
+        },
+        {
+          "name": "Diaper Bags"
+        },
+        {
+          "name": "Bags"
+        },
+        {
+          "name": "Hobo Handbags"
+        },
+      ]
+    },
+    {
+      "name": "Material Bag",
+      "childCategories": [
+        {
+          "name": "Beaded Handbags"
+        },
+        {
+          "name": "Fabric Handbags"
+        },
+        {
+          "name": "Handbags"
+        },
+        {
+          "name": "Leather Handbags"
+        },
+      ]
+    },
+    {
+      "name": "Designer Bag",
+      "childCategories": [
+        {
+          "name": "Flat Shoes"
+        },
+        {
+          "name": "Flat Sandals"
+        },
+        {
+          "name": "Boots"
+        },
+        {
+          "name": "Heels"
+        },
+      ]
+    },
+    {
+      "name": "Cotton Bag",
+      "childCategories": [
+        {
+          "name": "Bracelets"
+        },
+        {
+          "name": "Necklaces &amp; Pendants"
+        },
+        {
+          "name": "Pendants"
+        },
+        {
+          "name": "Pins &amp; Brooches"
+        },
+      ]
+    },
+  ]
+};
 
 const categoriesBanner = {
   "name": "Custom",
@@ -105,7 +102,7 @@ const categoriesBanner = {
 const SideMenu = () => {
   return (
     <div id="magik-verticalmenu" className="block magik-verticalmenu">
-      <div className="nav-title"> <span>Categories</span> </div>
+      <div className="nav-title"><span>Categories</span> </div>
       <div className="nav-content">
         <div className="navbar navbar-inverse">
           <div id="verticalmenu" className="verticalmenu" role="navigation">
@@ -114,7 +111,7 @@ const SideMenu = () => {
                 <ul className="nav navbar-nav verticalmenu">
                   <li className="parent dropdown">
                     <a href="grid.html" className="dropdown-toggle" data-toggle="dropdown">
-                      <span className="menu-title">Women</span>
+                      <span className="menu-title">{categories.name}</span>
                       <b className="round-arrow"></b>
                     </a>
                     <div className="dropdown-menu">
@@ -190,7 +187,6 @@ const SideMenu = () => {
                           </div>
                         </div>
                       </div>
-                      
                     </div>
                   </li>
                   <li className=" parent dropdown">
