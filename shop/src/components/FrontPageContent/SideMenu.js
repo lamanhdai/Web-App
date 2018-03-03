@@ -117,74 +117,30 @@ const SideMenu = () => {
                     <div className="dropdown-menu">
                       <div className="dropdown-menu-inner">
                         <div className="row">
-                          <div className="mega-col col-sm-66" data-widgets="wid-5" data-colwidth="6">
-                            <div className="mega-col-inner">
-                              <div className="ves-widget">
-                                <div className="menu-title">Styliest Bag</div>
-                                <div className="widget-html">
-                                  <div className="widget-inner">
-                                    <ul>
-                                      <li className="first"> <a href="grid.html"> <span>Clutch Handbags</span> </a> </li>
-                                      <li> <a href="grid.html"> <span>Diaper Bags</span> </a> </li>
-                                      <li> <a href="grid.html"> <span>Bags</span> </a> </li>
-                                      <li className="last"> <a href="grid.html"> <span>Hobo Handbags</span> </a> </li>
-                                    </ul>
+                          {
+                            categories.subCategories.map(subCategory => (
+                              <div className="mega-col col-sm-66" data-widgets="wid-5" data-colwidth="6" key={subCategory.name}>
+                                <div className="mega-col-inner">
+                                  <div className="ves-widget">
+                                    <div className="menu-title">{subCategory.name}</div>
+                                    <div className="widget-html">
+                                      <div className="widget-inner">
+                                        <ul>
+                                          {subCategory.childCategories.map(childCategory => (
+                                            <li className="first" key={childCategory.name}>
+                                              <a href="grid.html">
+                                                <span>{childCategory.name}</span>
+                                              </a>
+                                            </li>
+                                          ))}
+                                        </ul>
+                                      </div>
+                                    </div>
                                   </div>
                                 </div>
                               </div>
-                            </div>
-                          </div>
-                          <div className="mega-col col-sm-66" data-colwidth="6" data-widgets="wid-7">
-                            <div className="mega-col-inner">
-                              <div className="magik-widget">
-                                <div className="menu-title">Material Bag</div>
-                                <div className="widget-html">
-                                  <div className="widget-inner">
-                                    <ul>
-                                      <li className="first"> <a href="grid.html"> <span>Beaded Handbags</span> </a> </li>
-                                      <li> <a href="grid.html"> <span>Fabric Handbags</span> </a> </li>
-                                      <li> <a href="grid.html"> <span>Handbags</span> </a> </li>
-                                      <li className="last"> <a href="grid.html"> <span>Leather Handbags</span> </a> </li>
-                                    </ul>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <div className="mega-col col-sm-66" data-colwidth="6" data-widgets="wid-7">
-                            <div className="mega-col-inner">
-                              <div className="magik-widget">
-                                <div className="menu-title">Designer Bag</div>
-                                <div className="widget-html">
-                                  <div className="widget-inner">
-                                    <ul>
-                                      <li className="first"> <a href="grid.html"> <span>Flat Shoes</span> </a> </li>
-                                      <li> <a href="grid.html"> <span>Flat Sandals</span> </a> </li>
-                                      <li> <a href="grid.html"> <span>Boots</span> </a> </li>
-                                      <li className="last"> <a href="grid.html"> <span>Heels</span> </a> </li>
-                                    </ul>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <div className="mega-col col-sm-66 " data-colwidth="6" data-widgets="wid-7">
-                            <div className="mega-col-inner">
-                              <div className="magik-widget">
-                                <div className="menu-title">Cotton Bag</div>
-                                <div className="widget-html">
-                                  <div className="widget-inner">
-                                    <ul>
-                                      <li className="first"> <a href="grid.html"> <span>Bracelets</span> </a> </li>
-                                      <li> <a href="grid.html"> <span>Necklaces &amp; Pendants</span> </a> </li>
-                                      <li> <a href="grid.html"> <span>Pendants</span> </a> </li>
-                                      <li className="last"> <a href="grid.html"> <span>Pins &amp; Brooches</span> </a> </li>
-                                    </ul>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
+                            ))
+                          }
                         </div>
                       </div>
                     </div>
